@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Website Check — Clear Site Solutions</title>
+<meta name="description" content="Free 30-second website check. See your site's speed, mobile-friendliness, Google basics and security in plain English — and what it takes to fix them.">
+<link rel="canonical" href="https://bryanbyfield0-creator.github.io/clear-site-solutions/check">
+<meta property="og:url" content="https://bryanbyfield0-creator.github.io/clear-site-solutions/check">
+<meta property="og:title" content="Free Website Check — Clear Site Solutions">
+<meta property="og:description" content="How healthy is your website? Get a free plain-English report in about 30 seconds.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#2563eb; --accent-dark:#1d4ed8; --accent-soft:#eff6ff; --accent-2:#06b6d4;
+    --grad:linear-gradient(135deg,#2563eb 0%,#3b82f6 45%,#06b6d4 100%);
+    --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#ffffff; --bg-alt:#f8fafc;
+    --good:#16a34a; --ok:#d97706; --bad:#dc2626; --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  a{color:var(--accent);text-decoration:none}
+  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+  section{padding:80px 0;scroll-margin-top:76px}
+  h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
+  h1,h2,.logo{font-weight:800;letter-spacing:-.03em}
+  h2{font-size:clamp(26px,3.4vw,36px);margin-bottom:12px}
+  .lead{color:var(--muted);font-size:18px;max-width:640px}
+  .center{text-align:center}.center .lead{margin:0 auto}
+  .eyebrow{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px;background:var(--accent-soft);padding:6px 14px;border-radius:999px}
+  .alt{background:linear-gradient(180deg,#f8fafc 0%,#f1f5fb 100%);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
+  .logo{font-size:19px;color:var(--ink);display:flex;align-items:center;gap:10px;white-space:nowrap}
+  .logo-mark{width:32px;height:32px;border-radius:9px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:16px;box-shadow:0 6px 16px rgba(37,99,235,.35)}
+  .logo-accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:28px;align-items:center}
+  .nav-links a{color:var(--muted);font-size:15px;font-weight:500}
+  .nav-links a:hover,.nav-links a.active{color:var(--ink)}
+  .nav-links a.active{font-weight:700}
+  .btn{display:inline-block;background:var(--grad);background-size:160% 160%;background-position:0% 50%;color:#fff;font-weight:600;padding:14px 26px;border-radius:12px;border:0;font:inherit;font-weight:600;cursor:pointer;transition:background-position .35s,transform .15s,box-shadow .2s;box-shadow:0 6px 18px rgba(37,99,235,.25);text-align:center}
+  .btn:hover{background-position:100% 50%;transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,99,235,.35)}
+  .btn:disabled{opacity:.6;cursor:wait;transform:none}
+  .btn-sm{padding:9px 18px;font-size:15px;box-shadow:none}
+  .nav-links .btn-sm{color:#fff}
+  .btn-ghost{background:#fff;color:var(--ink);box-shadow:none;border:1px solid var(--line)}
+  .btn-ghost:hover{background:#fff;border-color:#bfdbfe;box-shadow:0 8px 20px rgba(15,23,42,.08)}
+
+  /* hero + form */
+  .hero{position:relative;overflow:hidden;padding:84px 0 72px;background:radial-gradient(700px 420px at 90% 0%,rgba(6,182,212,.18) 0%,transparent 60%),radial-gradient(900px 520px at 10% 110%,rgba(37,99,235,.14) 0%,transparent 60%),linear-gradient(180deg,#f5f9ff 0%,#fff 100%)}
+  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(37,99,235,.10) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%);pointer-events:none}
+  .hero .wrap{position:relative;text-align:center}
+  .hero h1{font-size:clamp(34px,5vw,54px);margin-bottom:16px}
+  .hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+  .hero .lead{margin:0 auto 34px}
+  .check-form{max-width:720px;margin:0 auto;display:flex;gap:10px;background:#fff;padding:10px;border-radius:18px;border:1px solid rgba(37,99,235,.18);box-shadow:0 30px 70px rgba(37,99,235,.14),0 4px 12px rgba(15,23,42,.05)}
+  .url-field{flex:1;display:flex;align-items:center;gap:10px;padding:0 14px;min-width:0}
+  .url-field svg{flex:none;color:#94a3b8}
+  .url-field input{flex:1;min-width:0;border:0;outline:0;font:inherit;font-size:17px;color:var(--ink);background:transparent;padding:14px 0}
+  .check-form:focus-within{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(37,99,235,.12),0 30px 70px rgba(37,99,235,.14)}
+  .check-form .btn{flex:none;padding:15px 28px;font-size:16.5px}
+  .form-hint{margin-top:12px;color:var(--bad);font-size:14.5px;min-height:22px;font-weight:500}
+  .trust{display:flex;gap:22px;flex-wrap:wrap;justify-content:center;margin-top:10px;color:var(--muted);font-size:15px}
+  .trust div::before{content:"✓";color:var(--accent);font-weight:800;margin-right:7px}
+
+  /* loading */
+  .panel{max-width:860px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:24px;box-shadow:0 24px 60px rgba(15,23,42,.08);padding:40px}
+  #loading{display:none;padding:0 0 72px}
+  .loader-top{display:flex;align-items:center;gap:18px;margin-bottom:26px}
+  .spinner{flex:none;width:52px;height:52px;border-radius:50%;border:5px solid #dbeafe;border-top-color:var(--accent);animation:spin 1s linear infinite}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  .loader-top h3{font-size:21px}
+  .loader-top p{color:var(--muted);font-size:15px;word-break:break-all}
+  .bar{height:10px;border-radius:999px;background:#eef2ff;overflow:hidden;margin-bottom:24px}
+  .bar span{display:block;height:100%;width:3%;border-radius:999px;background:var(--grad);transition:width .8s ease}
+  .steps-list{list-style:none;display:grid;gap:12px}
+  .steps-list li{display:flex;align-items:center;gap:12px;color:#94a3b8;font-size:16px;font-weight:500;transition:color .3s}
+  .steps-list li i{flex:none;width:24px;height:24px;border-radius:50%;border:2px solid #cbd5e1;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;color:#fff;transition:all .3s}
+  .steps-list li.on{color:var(--ink)}
+  .steps-list li.on i{border-color:var(--accent);border-top-color:transparent;animation:spin .9s linear infinite}
+  .steps-list li.done{color:var(--ink)}
+  .steps-list li.done i{background:var(--good);border-color:var(--good);animation:none}
+  .loader-note{margin-top:22px;font-size:14px;color:var(--muted)}
+
+  /* report */
+  #report{display:none;padding:0 0 40px}
+  .rep-head{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:28px}
+  .rep-head h2{font-size:clamp(24px,3vw,32px);margin-bottom:6px}
+  .rep-url{color:var(--muted);font-size:15.5px;word-break:break-all}
+  .rep-url b{color:var(--ink)}
+  .overall{display:flex;align-items:center;gap:16px;padding:16px 22px;border-radius:18px;background:var(--accent-soft);border:1px solid #dbeafe}
+  .overall .big{font-size:40px;font-weight:800;line-height:1;letter-spacing:-.03em}
+  .overall small{display:block;color:var(--muted);font-size:13px;font-weight:600;text-transform:uppercase;letter-spacing:.06em}
+  .overall strong{font-size:17px}
+  .gauges{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+  .gauge{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:22px 14px 20px;text-align:center;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.05);transition:transform .2s,box-shadow .2s}
+  .gauge:hover{transform:translateY(-3px);box-shadow:0 18px 40px rgba(37,99,235,.12)}
+  .ring{position:relative;width:104px;height:104px;margin:0 auto 12px}
+  .ring svg{width:104px;height:104px;transform:rotate(-90deg)}
+  .ring circle{fill:none;stroke-width:9}
+  .ring .track{stroke:#eef2f7}
+  .ring .val{stroke-linecap:round;transition:stroke-dashoffset 1.3s cubic-bezier(.2,.8,.2,1)}
+  .ring .num{position:absolute;inset:0;display:grid;place-items:center;font-size:30px;font-weight:800;letter-spacing:-.03em}
+  .gauge h3{font-size:16px;margin-bottom:4px}
+  .gauge p{color:var(--muted);font-size:13.5px;line-height:1.45}
+  .badge{display:inline-block;margin-top:10px;font-size:12px;font-weight:700;padding:3px 10px;border-radius:999px}
+  .b-good{background:#dcfce7;color:#15803d}.b-ok{background:#fef3c7;color:#b45309}.b-bad{background:#fee2e2;color:#b91c1c}
+  .https-icon{width:104px;height:104px;margin:0 auto 12px;border-radius:50%;display:grid;place-items:center;font-size:44px}
+  .https-yes{background:#dcfce7}.https-no{background:#fee2e2}
+
+  .issues-head{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;margin:52px 0 18px}
+  .issues-head h2{margin:0}
+  .issues-head p{color:var(--muted);font-size:15.5px}
+  .issues{display:grid;gap:14px}
+  .issue{display:flex;gap:18px;align-items:flex-start;background:#fff;border:1px solid var(--line);border-left:5px solid var(--bad);border-radius:16px;padding:22px 24px;box-shadow:0 8px 24px rgba(15,23,42,.05);opacity:0;transform:translateY(10px);animation:rise .5s forwards}
+  .issue.med{border-left-color:var(--ok)}
+  @keyframes rise{to{opacity:1;transform:none}}
+  .issue-ic{flex:none;width:48px;height:48px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#e0f2fe);border:1px solid #dbeafe;display:grid;place-items:center;font-size:23px}
+  .issue-body{flex:1;min-width:0}
+  .issue h3{font-size:18px;margin-bottom:4px}
+  .issue p{color:var(--muted);font-size:15.5px}
+  .fix-tag{flex:none;align-self:center;display:flex;flex-direction:column;align-items:flex-end;gap:6px;text-align:right}
+  .fix-tag .yes{display:inline-flex;align-items:center;gap:6px;background:#dcfce7;color:#15803d;font-size:13px;font-weight:700;padding:5px 12px;border-radius:999px;white-space:nowrap}
+  .fix-tag .cost{font-size:14px;font-weight:700;color:var(--accent);background:var(--accent-soft);padding:3px 10px;border-radius:8px;white-space:nowrap}
+  .all-good{text-align:center;padding:36px;border-radius:18px;background:linear-gradient(135deg,#f0fdf4,#ecfeff);border:1px solid #bbf7d0}
+  .all-good h3{font-size:22px;margin-bottom:6px}
+  .all-good p{color:var(--muted)}
+  .source{margin-top:18px;color:#94a3b8;font-size:13px;text-align:center}
+  .again{text-align:center;margin-top:20px}
+
+  /* error */
+  #errorBox{display:none;padding:0 0 30px}
+  .err{max-width:860px;margin:0 auto;display:flex;gap:18px;align-items:flex-start;padding:28px 30px;border-radius:20px;background:#fffbeb;border:1px solid #fde68a}
+  .err .e-ic{flex:none;font-size:30px;line-height:1}
+  .err h3{font-size:20px;margin-bottom:6px}
+  .err p{color:#78350f;font-size:15.5px}
+  .err .partial{margin-top:14px;display:flex;gap:10px;flex-wrap:wrap}
+  .err .partial span{background:#fff;border:1px solid #fde68a;border-radius:999px;padding:5px 12px;font-size:14px;font-weight:600;color:var(--ink)}
+  .err .err-ctas{margin-top:16px;display:flex;gap:12px;flex-wrap:wrap}
+
+  /* CTA + lead form */
+  #fix{padding:40px 0 88px}
+  .cta{position:relative;overflow:hidden;border-radius:26px;color:#fff;padding:56px 48px;display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:start;background:radial-gradient(600px 300px at 15% 0%,rgba(37,99,235,.55),transparent 60%),radial-gradient(600px 300px at 90% 100%,rgba(6,182,212,.4),transparent 60%),#0b1224}
+  .cta h2{color:#fff;font-size:clamp(28px,3.4vw,38px)}
+  .cta .lead{color:#cbd5e1;margin-bottom:24px}
+  .cta .eyebrow{background:rgba(147,197,253,.15);color:#93c5fd}
+  .price-list{list-style:none;display:grid;gap:12px;margin-bottom:26px}
+  .price-list li{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:14px 18px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);font-size:15.5px}
+  .price-list b{color:#93c5fd;white-space:nowrap}
+  .cta .direct{color:#cbd5e1;font-size:15px}
+  .cta .direct a{color:#93c5fd;font-weight:600}
+  .lead-form{background:#fff;color:var(--ink);border-radius:20px;padding:28px;box-shadow:0 24px 60px rgba(0,0,0,.25)}
+  .lead-form h3{font-size:20px;margin-bottom:4px}
+  .lead-form .sub{color:var(--muted);font-size:14.5px;margin-bottom:18px}
+  .fld{margin-bottom:14px}
+  .fld label{display:block;font-size:14px;font-weight:600;margin-bottom:6px}
+  .fld label em{font-style:normal;color:#94a3b8;font-weight:500}
+  .fld input,.fld textarea{width:100%;font:inherit;font-size:16px;color:var(--ink);padding:12px 14px;border:1px solid #cbd5e1;border-radius:12px;background:#f8fafc;transition:border-color .15s,box-shadow .15s,background .15s}
+  .fld input:focus,.fld textarea:focus{outline:0;border-color:var(--accent);background:#fff;box-shadow:0 0 0 4px rgba(37,99,235,.12)}
+  .fld textarea{min-height:92px;resize:vertical}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .lead-form .btn{width:100%;font-size:17px;padding:15px}
+  .scores-chip{display:none;margin-bottom:14px;font-size:13.5px;color:var(--accent-dark);background:var(--accent-soft);border:1px solid #dbeafe;border-radius:10px;padding:8px 12px}
+  .form-msg{margin-top:12px;font-size:14.5px;min-height:20px}
+  .form-msg.ok{color:var(--good);font-weight:600}
+  .form-msg.bad{color:var(--bad)}
+  .sent{display:none;text-align:center;padding:24px 8px}
+  .sent .tick{width:64px;height:64px;border-radius:50%;margin:0 auto 14px;background:#dcfce7;color:#16a34a;display:grid;place-items:center;font-size:30px;font-weight:800}
+  .sent h3{font-size:22px;margin-bottom:6px}
+  .sent p{color:var(--muted)}
+  .hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+
+  /* what we check */
+  .what{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:40px}
+  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px 22px;box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.05);transition:transform .2s,box-shadow .2s,border-color .2s}
+  .card:hover{transform:translateY(-4px);border-color:#bfdbfe;box-shadow:0 18px 40px rgba(37,99,235,.14)}
+  .icon{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#e0f2fe);border:1px solid #dbeafe;display:grid;place-items:center;font-size:24px;margin-bottom:16px}
+  .card h3{font-size:18px;margin-bottom:6px}
+  .card p{color:var(--muted);font-size:15px}
+
+  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
+  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+  @media (max-width:980px){
+    .gauges{grid-template-columns:repeat(3,1fr)}
+    .what{grid-template-columns:repeat(2,1fr)}
+    .cta{grid-template-columns:1fr;gap:32px;padding:44px 32px}
+  }
+  @media (max-width:680px){
+    section{padding:56px 0}
+    .hero{padding:52px 0 44px}
+    .nav-links a:not(.btn){display:none}
+    .logo{font-size:17px}
+    .check-form{flex-direction:column;padding:8px}
+    .url-field{border-bottom:1px solid var(--line)}
+    .check-form .btn{width:100%}
+    .panel{padding:26px 20px;border-radius:20px}
+    .gauges{grid-template-columns:repeat(2,1fr);gap:12px}
+    .gauge{padding:18px 10px}
+    .ring,.ring svg,.https-icon{width:88px;height:88px}
+    .https-icon{font-size:36px}
+    .ring .num{font-size:26px}
+    .gauge.https{grid-column:span 2}
+    .issue{flex-wrap:wrap;padding:18px;gap:14px}
+    .fix-tag{flex-direction:row;align-items:center;flex-wrap:wrap;width:100%;padding-left:62px;text-align:left}
+    .what{grid-template-columns:1fr}
+    .cta{padding:34px 20px;border-radius:22px}
+    .lead-form{padding:22px 18px}
+    .row2{grid-template-columns:1fr}
+    .err{flex-direction:column;padding:22px 20px}
+    .err .err-ctas .btn{width:100%}
+    .rep-head{flex-direction:column;align-items:flex-start}
+    .overall{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}.issue{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="./" class="logo"><span class="logo-mark">⚡</span><span>Clear Site <span class="logo-accent">Solutions</span></span></a>
+    <nav class="nav-links">
+      <a href="./#services">Services</a>
+      <a href="./#results">Results</a>
+      <a href="./#ai">AI assistant</a>
+      <a href="check" class="active">Free Website Check</a>
+      <a href="#fix" class="btn btn-sm">Get a fix</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Free · No signup · About 30 seconds</span>
+      <h1>How healthy is <span>your website?</span></h1>
+      <p class="lead">Enter your web address and get a free, plain-English report on speed, mobile-friendliness, Google basics and security — plus exactly what it would take to fix anything that's wrong.</p>
+      <form class="check-form" id="checkForm" novalidate>
+        <label class="url-field" for="urlInput">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+          <input id="urlInput" type="text" inputmode="url" autocomplete="url" autocapitalize="off" spellcheck="false" placeholder="yourbusiness.com" aria-label="Your website address">
+        </label>
+        <button class="btn" id="checkBtn" type="submit">Check my site →</button>
+      </form>
+      <div class="form-hint" id="hint" role="alert"></div>
+      <div class="trust">
+        <div>Uses Google's Lighthouse test</div>
+        <div>Results in plain English</div>
+        <div>Fixes from $25</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="loading" aria-live="polite">
+    <div class="wrap">
+      <div class="panel">
+        <div class="loader-top">
+          <div class="spinner" aria-hidden="true"></div>
+          <div><h3>Checking your website…</h3><p id="loadUrl"></p></div>
+        </div>
+        <div class="bar"><span id="barFill"></span></div>
+        <ul class="steps-list" id="stepsList">
+          <li><i>✓</i>Opening your site on a simulated phone</li>
+          <li><i>✓</i>Measuring how fast it loads</li>
+          <li><i>✓</i>Checking mobile-friendliness &amp; readability</li>
+          <li><i>✓</i>Checking Google search basics &amp; security</li>
+          <li><i>✓</i>Writing your plain-English report</li>
+        </ul>
+        <p class="loader-note">This usually takes 15–40 seconds. Hang tight — we're loading your site the way a real customer would.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="errorBox">
+    <div class="wrap">
+      <div class="err">
+        <div class="e-ic">⚠️</div>
+        <div>
+          <h3 id="errTitle">We couldn't finish the check</h3>
+          <p id="errText"></p>
+          <div class="partial" id="errPartial"></div>
+          <div class="err-ctas">
+            <a class="btn" href="#fix" id="errManual">Get a free manual check by email</a>
+            <button class="btn btn-ghost" type="button" id="errRetry">Try again</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="report" aria-live="polite">
+    <div class="wrap">
+      <div class="rep-head">
+        <div>
+          <span class="eyebrow">Your free report</span>
+          <h2 id="repTitle">Here's how your site is doing</h2>
+          <div class="rep-url">Checked: <b id="repUrl"></b> · on a mobile phone</div>
+        </div>
+        <div class="overall">
+          <div class="big" id="overallNum">–</div>
+          <div><small>Overall</small><strong id="overallTxt"></strong></div>
+        </div>
+      </div>
+      <div class="gauges" id="gauges"></div>
+      <div class="issues-head">
+        <div><h2 id="issuesTitle">Top problems we found</h2><p>Rewritten in plain English — and every one of them is fixable.</p></div>
+      </div>
+      <div class="issues" id="issues"></div>
+      <p class="source" id="source"></p>
+      <div class="again"><button class="btn btn-ghost" type="button" id="againBtn">↺ Check another site</button></div>
+    </div>
+  </section>
+
+  <section id="fix">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <span class="eyebrow">Let's fix it</span>
+          <h2 id="ctaTitle">Get these fixed — quick fixes from $25</h2>
+          <p class="lead" id="ctaLead">Send me your site and I'll look at your report personally, tell you honestly what's worth fixing, and give you a clear price before any work starts.</p>
+          <ul class="price-list">
+            <li><span>🔧 Quick fix — one specific problem</span><b>from $25</b></li>
+            <li><span>🚀 Speed, cleanup &amp; bigger repairs</span><b>clear quote first</b></li>
+            <li><span>📅 Monthly Care Plan — kept healthy</span><b>from $150/month</b></li>
+          </ul>
+          <p class="direct">Prefer email? Write to <a id="mailLink" href="mailto:the1ucantc@gmail.com?subject=Website%20check%20%E2%80%94%20please%20help">the1ucantc@gmail.com</a></p>
+        </div>
+        <div class="lead-form">
+          <form id="leadForm" novalidate>
+            <h3 id="formTitle">Get your site fixed</h3>
+            <p class="sub">I'll reply by email — usually the same day. No spam, ever.</p>
+            <div class="scores-chip" id="scoresChip"></div>
+            <div class="row2">
+              <div class="fld"><label for="fName">Name</label><input id="fName" name="name" type="text" autocomplete="name" required></div>
+              <div class="fld"><label for="fEmail">Email</label><input id="fEmail" name="email" type="email" autocomplete="email" required></div>
+            </div>
+            <div class="fld"><label for="fSite">Website</label><input id="fSite" name="website" type="text" inputmode="url" autocapitalize="off" placeholder="yourbusiness.com" required></div>
+            <div class="fld"><label for="fMsg">Anything else? <em>(optional)</em></label><textarea id="fMsg" name="message" placeholder="e.g. My contact form stopped working"></textarea></div>
+            <input type="hidden" name="scores" id="fScores" value="No automatic check run">
+            <div class="hp" aria-hidden="true"><label>Leave this empty<input type="text" name="_honey" tabindex="-1" autocomplete="off"></label></div>
+            <button class="btn" type="submit" id="leadBtn">Send — get my free fix plan</button>
+            <div class="form-msg" id="formMsg" role="status"></div>
+          </form>
+          <div class="sent" id="sentBox">
+            <div class="tick">✓</div>
+            <h3>Got it — thanks!</h3>
+            <p>I'll look at your site and email you back with a clear plan and price. Keep an eye on your inbox (and spam folder, just in case).</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="alt" id="what">
+    <div class="wrap">
+      <div class="center">
+        <span class="eyebrow">What we check</span>
+        <h2>The things your customers notice</h2>
+        <p class="lead">The same test Google uses to judge websites, translated into plain English.</p>
+      </div>
+      <div class="what">
+        <div class="card"><div class="icon">⚡</div><h3>Speed</h3><p>How fast your site loads on a phone. Slow sites lose customers before they see anything.</p></div>
+        <div class="card"><div class="icon">📱</div><h3>Mobile &amp; easy to use</h3><p>Readable text, tappable buttons and a layout that works for everyone, on every screen.</p></div>
+        <div class="card"><div class="icon">🔒</div><h3>Security &amp; best practices</h3><p>HTTPS, hidden errors and outdated code that can break forms or scare visitors away.</p></div>
+        <div class="card"><div class="icon">🔎</div><h3>Google basics</h3><p>Titles, descriptions and settings that help people find you on Google.</p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>© <span id="yr">2026</span> Clear Site Solutions · Website Fixes, Builds &amp; Care</div>
+    <div><a href="./">Home</a> · <a href="mailto:the1ucantc@gmail.com">the1ucantc@gmail.com</a></div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // ---- config ----
+  var CONTACT = "the1ucantc@gmail.com";
+  var FORM_ENDPOINT = "https://formsubmit.co/ajax/" + CONTACT;
+  var PSI_KEY = ""; // optional free Google API key (PageSpeed Insights). Keyless calls are tried first.
+  var PRICE = { quick: "Quick fix · from $25", bigger: "Free quote up front", care: "Care plan · $150/mo" };
+
+  // ---- plain-English problem catalog (Lighthouse audit ids -> business language) ----
+  var GROUPS = {
+    slow:     {rank:1,  ic:"🐢", tier:"bigger", t:"Your site loads slowly on phones", d:"Your main content takes {lcp} to show up. Most visitors give up after about 3 seconds — that's lost calls and sales."},
+    https:    {rank:2,  ic:"🔓", tier:"quick",  t:"Your site isn't fully secure (HTTPS)", d:"Browsers can show a \u201cNot secure\u201d warning, which scares customers away and hurts your Google ranking."},
+    crawl:    {rank:3,  ic:"🚫", tier:"quick",  t:"Google may be blocked from listing your site", d:"A setting on your site tells search engines to stay away, so customers may not find you on Google."},
+    status:   {rank:4,  ic:"❌", tier:"bigger", t:"Your page reports an error to Google", d:"The page answers with an error code instead of \u201cOK\u201d, which can keep it out of search results."},
+    images:   {rank:5,  ic:"🖼️", tier:"quick",  t:"Your images are too big", d:"Oversized photos make visitors wait. They can be shrunk with no visible loss in quality."},
+    code:     {rank:6,  ic:"🧩", tier:"bigger", t:"Too much extra code is slowing things down", d:"Your site loads scripts, plugins or trackers it doesn't need, which makes phones work harder and pages feel sluggish."},
+    server:   {rank:7,  ic:"⏳", tier:"bigger", t:"Your web server is slow to respond", d:"Before anything appears, visitors wait on your hosting. Caching or better settings can cut that wait a lot."},
+    blocking: {rank:8,  ic:"🚧", tier:"bigger", t:"Your page waits on extra files before showing anything", d:"Fonts, styles or scripts load in the wrong order, so visitors stare at a blank screen longer than needed."},
+    viewport: {rank:9,  ic:"📱", tier:"quick",  t:"Your site isn't set up properly for phones", d:"Text may be tiny or the page may not fit the screen, so phone visitors have to pinch and zoom."},
+    tap:      {rank:10, ic:"👆", tier:"quick",  t:"Buttons are too small or too close together on phones", d:"Visitors tap the wrong thing or can't tap at all — frustrating, especially on contact and order buttons."},
+    title:    {rank:11, ic:"🏷️", tier:"quick",  t:"Your page is missing a proper title", d:"The title is the blue headline people click in Google. Without a good one you get fewer clicks."},
+    desc:     {rank:12, ic:"📝", tier:"quick",  t:"No description shows under your link on Google", d:"Google has to guess what to show under your link, which usually means fewer people click it."},
+    contrast: {rank:13, ic:"👓", tier:"quick",  t:"Some text is hard to read", d:"Light text on a light background (or dark on dark) is hard to read, especially outdoors on a phone."},
+    errors:   {rank:14, ic:"🐞", tier:"quick",  t:"Your site has hidden errors", d:"The browser reports errors behind the scenes. These can quietly break forms, menus or checkouts."},
+    alt:      {rank:15, ic:"🏞️", tier:"quick",  t:"Images are missing descriptions", d:"Google and screen readers can't tell what your images show, so you miss out on image search and accessibility."},
+    labels:   {rank:16, ic:"🔗", tier:"quick",  t:"Some buttons, links or form fields aren't labeled", d:"Things like \u201cclick here\u201d or unlabeled fields confuse visitors, screen readers and Google."},
+    shift:    {rank:17, ic:"↕️", tier:"quick",  t:"Things jump around while the page loads", d:"Buttons and text move as the page loads, so visitors tap the wrong thing."},
+    cache:    {rank:18, ic:"♻️", tier:"quick",  t:"Returning visitors re-download everything", d:"Your site doesn't tell browsers to remember files, so repeat visits are slower than they should be."},
+    outdated: {rank:19, ic:"🧓", tier:"care",   t:"Your site uses outdated code", d:"Some features your site relies on are being retired by browsers and can break without warning."},
+    blurry:   {rank:20, ic:"🔍", tier:"quick",  t:"Some images look stretched or blurry", d:"Images are shown at the wrong size or shape, which makes the site look less professional."},
+    headings: {rank:21, ic:"📑", tier:"quick",  t:"Page headings are out of order", d:"Messy headings make your page harder to scan for visitors, screen readers and Google."},
+    links:    {rank:22, ic:"🕸️", tier:"quick",  t:"Google can't follow some of your links", d:"Some links are built in a way search engines can't follow, so pages may not get found."},
+    lang:     {rank:23, ic:"🌐", tier:"quick",  t:"Your page language isn't set", d:"Browsers and screen readers don't know what language your site is in, which can affect translation and reading aloud."}
+  };
+  var AUDIT_MAP = {
+    "largest-contentful-paint":"slow","first-contentful-paint":"slow","speed-index":"slow","interactive":"slow","total-blocking-time":"slow",
+    "is-on-https":"https","is-crawlable":"crawl","robots-txt":"crawl","http-status-code":"status",
+    "uses-optimized-images":"images","modern-image-formats":"images","uses-responsive-images":"images","offscreen-images":"images","image-delivery-insight":"images","efficient-animated-content":"images","total-byte-weight":"images",
+    "unused-javascript":"code","unused-css-rules":"code","unminified-javascript":"code","unminified-css":"code","legacy-javascript":"code","legacy-javascript-insight":"code","duplicated-javascript":"code","duplicated-javascript-insight":"code","bootup-time":"code","mainthread-work-breakdown":"code","third-parties-insight":"code","third-party-summary":"code","dom-size":"code","dom-size-insight":"code","forced-reflow-insight":"code",
+    "server-response-time":"server","document-latency-insight":"server","redirects":"server","uses-text-compression":"server","uses-http2":"server",
+    "render-blocking-resources":"blocking","render-blocking-insight":"blocking","font-display":"blocking","font-display-insight":"blocking","lcp-discovery-insight":"blocking","network-dependency-tree-insight":"blocking","critical-request-chains":"blocking","uses-rel-preconnect":"blocking",
+    "meta-viewport":"viewport","viewport":"viewport","viewport-insight":"viewport","font-size":"viewport","content-width":"viewport",
+    "target-size":"tap","tap-targets":"tap",
+    "document-title":"title","meta-description":"desc","color-contrast":"contrast",
+    "errors-in-console":"errors","inspector-issues":"errors",
+    "image-alt":"alt","input-image-alt":"alt","svg-img-alt":"alt",
+    "link-name":"labels","button-name":"labels","link-text":"labels","label":"labels","select-name":"labels","input-button-name":"labels",
+    "cumulative-layout-shift":"shift","layout-shift-culprits":"shift","cls-culprits-insight":"shift","unsized-images":"shift",
+    "uses-long-cache-ttl":"cache","cache-insight":"cache",
+    "deprecations":"outdated","no-document-write":"outdated",
+    "image-aspect-ratio":"blurry","image-size-responsive":"blurry",
+    "heading-order":"headings","crawlable-anchors":"links","html-has-lang":"lang","html-lang-valid":"lang"
+  };
+
+  var $ = function(id){return document.getElementById(id);};
+  var current = null, timers = [];
+
+  function normalizeUrl(v){
+    v = (v||"").trim().replace(/\s+/g,"");
+    if(!v) return null;
+    if(!/^https?:\/\//i.test(v)) v = "https://" + v.replace(/^\/+/,"");
+    try{
+      var u = new URL(v);
+      if(!/\./.test(u.hostname) || /^(localhost|127\.|10\.|192\.168\.)/.test(u.hostname)) return null;
+      return u.href;
+    }catch(e){ return null; }
+  }
+  function show(id, on){ $(id).style.display = on ? "block" : "none"; }
+  function clearTimers(){ timers.forEach(clearTimeout); timers = []; }
+
+  function startLoading(url){
+    show("report", false); show("errorBox", false); show("loading", true);
+    $("loadUrl").textContent = url;
+    var lis = $("stepsList").children, bar = $("barFill");
+    for(var i=0;i<lis.length;i++) lis[i].className = "";
+    bar.style.width = "3%";
+    var plan = [[0,0,8],[2500,1,25],[8000,2,48],[15000,3,68],[23000,4,86]];
+    plan.forEach(function(p){
+      timers.push(setTimeout(function(){
+        for(var i=0;i<lis.length;i++) lis[i].className = i < p[1] ? "done" : (i===p[1] ? "on" : "");
+        bar.style.width = p[2] + "%";
+      }, p[0]));
+    });
+    timers.push(setTimeout(function(){ bar.style.width = "93%"; }, 38000));
+    $("loading").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+  function finishLoading(){
+    clearTimers();
+    var lis = $("stepsList").children;
+    for(var i=0;i<lis.length;i++) lis[i].className = "done";
+    $("barFill").style.width = "100%";
+  }
+
+  function fetchJson(url, opts, ms){
+    var ctrl = ("AbortController" in window) ? new AbortController() : null;
+    var t = setTimeout(function(){ if(ctrl) ctrl.abort(); }, ms || 60000);
+    opts = opts || {}; if(ctrl) opts.signal = ctrl.signal;
+    return fetch(url, opts).then(function(r){
+      return r.text().then(function(txt){
+        clearTimeout(t);
+        var j = null; try{ j = JSON.parse(txt); }catch(e){}
+        return {status:r.status, ok:r.ok, json:j};
+      });
+    }, function(e){ clearTimeout(t); throw e; });
+  }
+
+  // Engine 1: Google PageSpeed Insights (keyless often hits Google's shared daily limit)
+  function runPSI(url){
+    var q = "https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=" + encodeURIComponent(url) +
+            "&strategy=mobile&category=performance&category=accessibility&category=best-practices&category=seo" + (PSI_KEY ? "&key=" + PSI_KEY : "");
+    return fetchJson(q, {}, 70000).then(function(r){
+      if(r.ok && r.json && r.json.lighthouseResult && r.json.lighthouseResult.categories && r.json.lighthouseResult.categories.performance)
+        return {lh:r.json.lighthouseResult, source:"Google PageSpeed Insights"};
+      var e = new Error("psi"); e.status = r.status; e.msg = r.json && r.json.error && r.json.error.message; throw e;
+    });
+  }
+  // Engine 2: Lighthouse via Microlink's free API (same Google Lighthouse test)
+  function runMicrolink(url, attempt){
+    var q = "https://api.microlink.io/?url=" + encodeURIComponent(url) +
+            "&meta=false&insights.lighthouse=true&insights.technologies=false" +
+            "&filter=" + encodeURIComponent("insights.lighthouse.categories,insights.lighthouse.audits,insights.lighthouse.finalDisplayedUrl,insights.lighthouse.runtimeError");
+    return fetchJson(q, {}, 60000).then(function(r){
+      var j = r.json || {};
+      var lh = j.data && j.data.insights && j.data.insights.lighthouse;
+      if(r.ok && j.status === "success" && lh && lh.categories && lh.categories.performance)
+        return {lh:lh, source:"Google Lighthouse"};
+      var e = new Error("ml"); e.status = r.status; e.code = j.code; e.msg = j.message; throw e;
+    }).catch(function(e){
+      if((attempt||0) < 1 && e && e.status !== 429 && e.code !== "EINVALURL" && e.code !== "EFATALCLIENT" ){
+        return runMicrolink(url, 1);
+      }
+      throw e;
+    });
+  }
+  // Engine 3 (partial): Mozilla Observatory — HTTPS + security basics when the full test is unavailable
+  function runObservatory(url){
+    var host = new URL(url).hostname;
+    return fetchJson("https://observatory-api.mdn.mozilla.net/api/v2/scan?host=" + encodeURIComponent(host), {method:"POST"}, 25000)
+      .then(function(r){ if(!r.ok || !r.json || r.json.error) throw new Error("obs"); return r.json; });
+  }
+
+  function color(s){ return s >= 90 ? "var(--good)" : s >= 50 ? "var(--ok)" : "var(--bad)"; }
+  function badge(s){ return s >= 90 ? ["b-good","Good"] : s >= 50 ? ["b-ok","Needs work"] : ["b-bad","Poor"]; }
+  function el(tag, cls, txt){ var e = document.createElement(tag); if(cls) e.className = cls; if(txt != null) e.textContent = txt; return e; }
+
+  function gauge(label, desc, score){
+    var g = el("div","gauge"), C = 2*Math.PI*44;
+    var ring = el("div","ring");
+    ring.innerHTML = '<svg viewBox="0 0 104 104"><circle class="track" cx="52" cy="52" r="44"/><circle class="val" cx="52" cy="52" r="44" stroke-dasharray="'+C+'" stroke-dashoffset="'+C+'"/></svg>';
+    var num = el("div","num","0"); num.style.color = color(score); ring.appendChild(num);
+    var val = ring.querySelector(".val"); val.style.stroke = color(score);
+    g.appendChild(ring); g.appendChild(el("h3",null,label)); g.appendChild(el("p",null,desc));
+    var b = badge(score); g.appendChild(el("span","badge "+b[0], b[1]));
+    requestAnimationFrame(function(){ requestAnimationFrame(function(){ val.style.strokeDashoffset = C*(1-score/100); }); });
+    var start = null;
+    function tick(ts){ if(!start) start = ts; var p = Math.min(1,(ts-start)/1200); num.textContent = Math.round(score*(1-Math.pow(1-p,3))); if(p<1) requestAnimationFrame(tick); }
+    requestAnimationFrame(tick);
+    return g;
+  }
+  function httpsCard(yes){
+    var g = el("div","gauge https");
+    var ic = el("div","https-icon " + (yes ? "https-yes" : "https-no"), yes ? "🔒" : "🔓");
+    g.appendChild(ic);
+    g.appendChild(el("h3",null,"Secure (HTTPS)"));
+    g.appendChild(el("p",null, yes ? "Your site uses a secure connection." : "Visitors may see a \u201cNot secure\u201d warning."));
+    g.appendChild(el("span","badge " + (yes ? "b-good" : "b-bad"), yes ? "Yes" : "No"));
+    return g;
+  }
+
+  function pickIssues(lh){
+    var audits = lh.audits || {}, found = {}, perf = lh.categories.performance.score;
+    Object.keys(audits).forEach(function(id){
+      var a = audits[id], key = AUDIT_MAP[id];
+      if(!key || !a || a.score === null || a.score === undefined) return;
+      if(["manual","notApplicable","informative","error"].indexOf(a.scoreDisplayMode) >= 0) return;
+      if(a.score >= 0.9) return;
+      if(key === "slow" && perf >= 0.9) return;
+      if(!found[key] || a.score < found[key].score) found[key] = {score:a.score};
+    });
+    var keys = Object.keys(found).sort(function(a,b){ return GROUPS[a].rank - GROUPS[b].rank; });
+    // speed-related groups only matter if speed score is not already good
+    if(perf >= 0.9) keys = keys.filter(function(k){ return ["images","code","server","blocking","cache"].indexOf(k) < 0 || found[k].score < 0.5; });
+    var lcp = audits["largest-contentful-paint"] && audits["largest-contentful-paint"].displayValue;
+    return keys.slice(0,5).map(function(k){
+      var g = GROUPS[k];
+      return {key:k, ic:g.ic, tier:g.tier, title:g.t, desc:g.d.replace("{lcp}", lcp ? lcp.replace(/\u00a0/g," ") : "several seconds"), severe: found[k].score < 0.5};
+    });
+  }
+
+  function renderReport(url, res){
+    var lh = res.lh, c = lh.categories;
+    var s = {
+      speed: Math.round((c.performance.score||0)*100),
+      access: Math.round(((c.accessibility||{}).score||0)*100),
+      best: Math.round(((c["best-practices"]||{}).score||0)*100),
+      seo: Math.round(((c.seo||{}).score||0)*100)
+    };
+    var finalUrl = lh.finalDisplayedUrl || lh.finalUrl || url;
+    var httpsA = lh.audits && lh.audits["is-on-https"];
+    var httpsYes = /^https:/i.test(finalUrl) && !(httpsA && httpsA.score === 0);
+    var overall = Math.round((s.speed + s.access + s.best + s.seo)/4);
+
+    $("repUrl").textContent = finalUrl.replace(/\/$/,"");
+    $("overallNum").textContent = overall; $("overallNum").style.color = color(overall);
+    
+    
+
+    var G = $("gauges"); G.innerHTML = "";
+    G.appendChild(gauge("Speed","How fast it loads on a phone", s.speed));
+    G.appendChild(gauge("Mobile & easy to use","Readable, tappable, works for everyone", s.access));
+    G.appendChild(gauge("Best practices","Hidden errors & outdated code", s.best));
+    G.appendChild(gauge("Google basics (SEO)","Helps customers find you on Google", s.seo));
+    G.appendChild(httpsCard(httpsYes));
+
+    var issues = pickIssues(lh);
+    if(!httpsYes && !issues.some(function(i){return i.key==="https";})){
+      var g = GROUPS.https; issues.unshift({key:"https", ic:g.ic, tier:g.tier, title:g.t, desc:g.d, severe:true}); issues = issues.slice(0,5);
+    }
+    var I = $("issues"); I.innerHTML = "";
+    $("overallTxt").textContent = (overall >= 90 && issues.length <= 1) ? "Looking great" : overall >= 75 ? "Good, with a few fixes" : overall >= 50 ? "Needs some work" : "Needs attention";
+    $("repTitle").textContent = !issues.length ? "Nice — your site is in good shape" : overall >= 75 ? "Good start — a few things to fix" : "Here's how your site is doing";
+    if(!issues.length){
+      var ok = el("div","all-good");
+      ok.appendChild(el("h3",null,"🎉 No major problems found"));
+      ok.appendChild(el("p",null,"Your site passed the big checks. Keep it that way with a Monthly Care Plan (from $150/month) — updates, monitoring and small fixes handled for you."));
+      I.appendChild(ok);
+      $("issuesTitle").textContent = "No major problems found";
+    } else {
+      $("issuesTitle").textContent = issues.length === 1 ? "The top problem we found" : "Top " + issues.length + " problems we found";
+      issues.forEach(function(it, i){
+        var row = el("div","issue" + (it.severe ? "" : " med")); row.style.animationDelay = (0.12*i) + "s";
+        row.appendChild(el("div","issue-ic", it.ic));
+        var body = el("div","issue-body"); body.appendChild(el("h3",null,it.title)); body.appendChild(el("p",null,it.desc)); row.appendChild(body);
+        var tag = el("div","fix-tag"); tag.appendChild(el("span","yes","✓ We can fix this")); tag.appendChild(el("span","cost", PRICE[it.tier])); row.appendChild(tag);
+        I.appendChild(row);
+      });
+    }
+    $("source").textContent = "Tested with " + res.source + " (mobile) on " + new Date().toLocaleDateString(undefined,{month:"short",day:"numeric",year:"numeric"}) + ". Scores can vary a little from run to run.";
+
+    var summary = "Speed " + s.speed + ", Mobile/Accessibility " + s.access + ", Best practices " + s.best + ", SEO " + s.seo + ", HTTPS " + (httpsYes ? "yes" : "NO") + " | Top issues: " + (issues.length ? issues.map(function(i){return i.title;}).join("; ") : "none");
+    setLeadContext(finalUrl, summary, "Speed " + s.speed + " · Mobile " + s.access + " · Best practices " + s.best + " · SEO " + s.seo + " · HTTPS " + (httpsYes ? "✓" : "✗"), issues.length);
+    show("loading", false); show("report", true);
+    $("report").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function setLeadContext(url, summary, chip, n){
+    $("fSite").value = url.replace(/\/$/,"");
+    $("fScores").value = summary;
+    var ch = $("scoresChip"); ch.textContent = "📊 Your report will be attached: " + chip; ch.style.display = "block";
+    $("formTitle").textContent = n ? "Get my fix plan" : "Keep my site healthy";
+    $("ctaTitle").textContent = n ? "Get these fixed — quick fixes from $25" : "Keep it fast & safe — quick fixes from $25";
+    var body = "Hi,\n\nI just ran the free website check on " + url + ".\n\nResults: " + summary + "\n\nPlease let me know what it would take to fix.\n";
+    $("mailLink").href = "mailto:" + CONTACT + "?subject=" + encodeURIComponent("Website check — " + url.replace(/^https?:\/\//,"").replace(/\/$/,"")) + "&body=" + encodeURIComponent(body);
+  }
+
+  function showError(url, title, text, partial){
+    finishLoading(); show("loading", false); show("report", false);
+    $("errTitle").textContent = title; $("errText").textContent = text;
+    var P = $("errPartial"); P.innerHTML = "";
+    (partial||[]).forEach(function(p){ P.appendChild(el("span", null, p)); });
+    show("errorBox", true);
+    setLeadContext(url, "Automatic check unavailable — please do a manual check" + (partial && partial.length ? " (" + partial.join(", ") + ")" : ""), "Free manual check requested", 1);
+    $("formTitle").textContent = "Get a free manual check";
+    $("ctaTitle").textContent = "Get a free manual check — quick fixes from $25";
+    $("errorBox").scrollIntoView({behavior:"smooth", block:"start"});
+  }
+
+  function run(url){
+    current = url;
+    $("checkBtn").disabled = true;
+    startLoading(url);
+    runPSI(url).catch(function(){ return runMicrolink(url, 0); }).then(function(res){
+      if(current !== url) return;
+      finishLoading();
+      setTimeout(function(){ renderReport(url, res); }, 450);
+    }).catch(function(e){
+      if(current !== url) return;
+      var limited = e && (e.status === 429 || e.code === "ERATELIMIT");
+      var badUrl = e && (e.code === "EINVALURL" || e.code === "EFAILEDLOOKUP" || e.code === "EPROXYNEEDED" || /ENOTFOUND|DNS|resolve/i.test(e.msg || ""));
+      var title = limited ? "Our free checker is busy right now" : badUrl ? "We couldn't reach that website" : "We couldn't finish the check";
+      var text = limited ? "The free testing service has hit its limit for the moment. No problem — send your details below and I'll run a full check by hand and email you the results for free."
+               : badUrl ? "Double-check the address (for example: yourbusiness.com). If it's right, the site may be down or blocking automated tests — which is worth knowing! Send it below and I'll take a look by hand, free."
+               : "Some sites take too long or block automated tests. Send your details below and I'll run a full check by hand and email you the results — free.";
+      runObservatory(url).then(function(o){
+        var parts = [];
+        if(o.status_code) parts.push("Site responded: " + (o.status_code < 400 ? "yes ✓" : "error " + o.status_code));
+        if(o.grade) parts.push("Security headers grade: " + o.grade);
+        showError(url, title, text, parts);
+      }).catch(function(){ showError(url, title, text, []); });
+    }).then(function(){ $("checkBtn").disabled = false; });
+  }
+
+  $("checkForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var url = normalizeUrl($("urlInput").value);
+    if(!url){ $("hint").textContent = "Please enter a website address, like yourbusiness.com"; $("urlInput").focus(); return; }
+    $("hint").textContent = "";
+    try{ history.replaceState(null, "", "?url=" + encodeURIComponent(url.replace(/^https:\/\//,"").replace(/\/$/,""))); }catch(e){}
+    run(url);
+  });
+  $("againBtn").addEventListener("click", function(){ show("report", false); $("urlInput").value = ""; window.scrollTo({top:0, behavior:"smooth"}); setTimeout(function(){ $("urlInput").focus(); }, 400); });
+  $("errRetry").addEventListener("click", function(){ if(current) run(current); });
+
+  // ---- lead form (FormSubmit -> email) ----
+  $("leadForm").addEventListener("submit", function(ev){
+    ev.preventDefault();
+    var f = ev.target, msg = $("formMsg");
+    var name = f.name.value.trim(), email = f.email.value.trim(), site = f.website.value.trim();
+    if(!name || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !site){ msg.className = "form-msg bad"; msg.textContent = "Please add your name, a valid email and your website."; return; }
+    if(f._honey.value) return;
+    var btn = $("leadBtn"); btn.disabled = true; btn.textContent = "Sending…"; msg.className = "form-msg"; msg.textContent = "";
+    var payload = {
+      name:name, email:email, website:site, message:f.message.value.trim() || "(none)", scores:$("fScores").value,
+      _subject:"New website check lead: " + site.replace(/^https?:\/\//,""), _template:"table", _captcha:"false", _replyto:email
+    };
+    fetchJson(FORM_ENDPOINT, {method:"POST", headers:{"Content-Type":"application/json","Accept":"application/json"}, body:JSON.stringify(payload)}, 30000)
+      .then(function(r){
+        var ok = r.ok && r.json && (r.json.success === true || r.json.success === "true");
+        if(!ok) throw new Error((r.json && r.json.message) || "send failed");
+        f.style.display = "none"; $("sentBox").style.display = "block";
+      }).catch(function(){
+        var body = "Name: " + name + "\nEmail: " + email + "\nWebsite: " + site + "\n\nMessage: " + (f.message.value.trim() || "-") + "\n\nCheck results: " + $("fScores").value + "\n";
+        var href = "mailto:" + CONTACT + "?subject=" + encodeURIComponent("Website check — " + site) + "&body=" + encodeURIComponent(body);
+        msg.className = "form-msg bad"; msg.innerHTML = "";
+        msg.appendChild(document.createTextNode("Hmm, that didn't send. "));
+        var a = el("a", null, "Tap here to send it by email instead →"); a.href = href; a.style.fontWeight = "700"; msg.appendChild(a);
+        btn.disabled = false; btn.textContent = "Send — get my free fix plan";
+      });
+  });
+
+  // deep link: /check?url=example.com
+  try{
+    var p = new URLSearchParams(location.search).get("url");
+    if(p){ $("urlInput").value = p; var u = normalizeUrl(p); if(u) run(u); }
+  }catch(e){}
+})();
+</script>
+<script>function openAssistant(){try{if(window.DocsBotAI&&typeof window.DocsBotAI.open==="function"){window.DocsBotAI.open();return}}catch(e){}window.open("https://docsbot.ai/chat/JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3","_blank","noopener")}</script>
+<script type="text/javascript">window.DocsBotAI=window.DocsBotAI||{},DocsBotAI.init=function(e){return new Promise((t,r)=>{var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://widget.docsbot.ai/chat.js";let o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o),n.addEventListener("load",()=>{let n;Promise.all([new Promise((t,r)=>{window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)}),(n=function e(t){return new Promise(e=>{if(document.querySelector(t))return e(document.querySelector(t));let r=new MutationObserver(n=>{if(document.querySelector(t))return e(document.querySelector(t)),r.disconnect()});r.observe(document.body,{childList:!0,subtree:!0})})})("#docsbotai-root"),]).then(()=>t()).catch(r)}),n.addEventListener("error",e=>{r(e.message)})})};</script>
+<script type="text/javascript">DocsBotAI.init({id: "JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3"});</script>
+</body>
+</html>
