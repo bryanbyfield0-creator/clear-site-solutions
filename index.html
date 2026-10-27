@@ -3,456 +3,608 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clear Site Solutions — Website Fixes &amp; Care for Small Businesses</title>
+<title>Clear Site Solutions | Website Repair &amp; Care in San Bernardino &amp; the Inland Empire</title>
 <link rel="canonical" href="https://bryanbyfield0-creator.github.io/clear-site-solutions/">
-<meta property="og:url" content="https://bryanbyfield0-creator.github.io/clear-site-solutions/">
 <meta name="google-site-verification" content="YdKjHRNROk25zAHtuG9H_pCIgPNHRqH5X8dYT1zvJEk" />
-<meta name="description" content="Clear Site Solutions — fast, affordable website fixes, new website builds, cleanup, speed optimization, and monthly care plans for small businesses across the United States.">
+<meta name="description" content="Broken form, hacked site, slow pages? Clear Site Solutions fixes small-business websites from $25 and keeps them running with Site Care from $150/month. Based in San Bernardino, serving the Inland Empire.">
+<meta name="theme-color" content="#10201b">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://bryanbyfield0-creator.github.io/clear-site-solutions/">
+<meta property="og:title" content="Clear Site Solutions | We fix your website. Then we keep it fixed.">
+<meta property="og:description" content="Website repair and care for Inland Empire small businesses. Quick fixes from $25. Site Care from $150/month.">
+<meta property="og:image" content="https://bryanbyfield0-creator.github.io/clear-site-solutions/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
 <style>
-  :root{
-    --accent:#2563eb; --accent-dark:#1d4ed8; --accent-soft:#eff6ff;
-    --ink:#0f172a; --muted:#475569; --line:#e2e8f0; --bg:#ffffff; --bg-alt:#f8fafc;
-    --radius:14px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Inter,Roboto,"Helvetica Neue",Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
-  a{color:var(--accent);text-decoration:none}
-  .wrap{max-width:1100px;margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
-  .alt{background:var(--bg-alt);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-  .eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-  h1,h2,h3{line-height:1.2;letter-spacing:-.02em}
-  h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:14px}
-  .lead{color:var(--muted);font-size:18px;max-width:640px}
-  .center{text-align:center}.center .lead{margin:0 auto}
+:root{
+  --paper:#f3efe6; --paper-2:#ebe5d8; --card:#fbf9f4;
+  --ink:#10201b; --ink-2:#1b2f28; --muted:#56635d; --line:#d8d0bf;
+  --signal:#ff5b2e; --signal-d:#e44619; --ok:#2e9e6a; --bad:#d6452b; --sun:#f6c445;
+  --display:"Bricolage Grotesque",ui-sans-serif,system-ui,sans-serif;
+  --body:"Instrument Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --r:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--body);background:var(--paper);color:var(--ink);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit}
+img,svg{display:block;max-width:100%}
+.wrap{max-width:1200px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12.5px;letter-spacing:.06em;text-transform:uppercase}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--signal-d)}
+.tag::before{content:"";width:18px;height:2px;background:currentColor}
+h1,h2,h3{font-family:var(--display);line-height:1.02;letter-spacing:-.035em;font-weight:800}
+h2{font-size:clamp(36px,5vw,64px)}
+h3{font-size:24px;letter-spacing:-.02em;line-height:1.15}
+p.lede{font-size:19px;color:var(--muted);max-width:560px}
+.hl{position:relative;white-space:nowrap}
+.hl::after{content:"";position:absolute;left:-2%;right:-2%;bottom:.06em;height:.26em;background:var(--signal);opacity:.9;z-index:-1;transform:skew(-8deg) scaleX(0);transform-origin:left;animation:mark .9s .5s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes mark{to{transform:skew(-8deg) scaleX(1)}}
 
-  /* nav */
-  header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:66px}
-  .logo{font-weight:800;font-size:19px;color:var(--ink);display:flex;align-items:center;gap:10px}
-  .logo-mark{width:32px;height:32px;border-radius:9px;background:var(--accent);color:#fff;display:grid;place-items:center;font-size:16px}
-  .nav-links{display:flex;gap:28px;align-items:center}
-  .nav-links a{color:var(--muted);font-size:15px;font-weight:500}
-  .nav-links a:hover{color:var(--ink)}
-  .btn{display:inline-block;background:var(--accent);color:#fff;font-weight:600;padding:14px 26px;border-radius:10px;transition:background .15s,transform .15s;box-shadow:0 6px 18px rgba(37,99,235,.25)}
-  .btn:hover{background:var(--accent-dark);transform:translateY(-1px)}
-  .btn-sm{padding:9px 18px;font-size:15px;box-shadow:none}
-  .nav-links .btn-sm{color:#fff}
-  .btn-ghost{background:transparent;color:var(--ink);box-shadow:none;border:1px solid var(--line)}
-  .btn-ghost:hover{background:var(--bg-alt)}
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:16px;text-decoration:none;padding:16px 24px;border-radius:999px;border:2px solid var(--ink);background:var(--ink);color:var(--paper);transition:transform .2s,box-shadow .2s,background .2s;cursor:pointer;font-family:var(--body)}
+.btn:hover{transform:translate(-2px,-2px);box-shadow:4px 4px 0 var(--signal)}
+.btn .arr{transition:transform .2s}.btn:hover .arr{transform:translateX(4px)}
+.btn-signal{background:var(--signal);border-color:var(--signal);color:#1a0d07}
+.btn-signal:hover{box-shadow:4px 4px 0 var(--ink)}
+.btn-line{background:transparent;color:var(--ink)}
+.btn-sm{padding:10px 18px;font-size:15px}
 
-  /* hero */
-  .hero{padding:96px 0 88px;background:radial-gradient(1200px 500px at 85% -10%,#dbeafe 0%,transparent 60%),#fff}
-  .hero-grid{display:grid;grid-template-columns:1.25fr 1fr;gap:56px;align-items:center}
-  .hero h1{font-size:clamp(36px,5.2vw,56px);margin-bottom:20px}
-  .hero h1 span{color:var(--accent)}
-  .hero .lead{margin-bottom:32px}
-  .hero-ctas{display:flex;gap:14px;flex-wrap:wrap}
-  .trust{display:flex;gap:22px;flex-wrap:wrap;margin-top:30px;color:var(--muted);font-size:15px}
-  .trust div::before{content:"✓";color:var(--accent);font-weight:800;margin-right:7px}
-  .hero-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:28px;box-shadow:0 20px 50px rgba(15,23,42,.08)}
-  .hero-card h3{font-size:16px;color:var(--muted);font-weight:600;margin-bottom:16px}
-  .check{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--line);font-size:15.5px}
-  .check:last-child{border-bottom:0}
-  .dot{flex:none;width:22px;height:22px;border-radius:50%;background:#dcfce7;color:#16a34a;display:grid;place-items:center;font-size:13px;font-weight:800;margin-top:1px}
+/* nav */
+header{position:sticky;top:0;z-index:50;background:rgba(243,239,230,.88);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid transparent;transition:border-color .2s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+.logo{display:flex;align-items:center;gap:11px;text-decoration:none}
+.logo svg{width:36px;height:36px}
+.logo b{font-family:var(--display);font-size:21px;letter-spacing:-.03em;display:block;line-height:1}
+.logo small{font-family:var(--mono);font-size:10.5px;letter-spacing:.18em;color:var(--muted);display:block;margin-top:3px}
+.nav-links{display:flex;align-items:center;gap:30px}
+.nav-links a:not(.btn){text-decoration:none;font-weight:500;font-size:15px;color:var(--ink-2)}
+.nav-links a:not(.btn):hover{color:var(--signal-d)}
 
-  /* services */
-  .grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:48px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 24px;display:flex;flex-direction:column}
-  .card.featured{border:2px solid var(--accent);box-shadow:0 14px 34px rgba(37,99,235,.12)}
-  .icon{width:44px;height:44px;border-radius:11px;background:var(--accent-soft);display:grid;place-items:center;font-size:22px;margin-bottom:18px}
-  .card h3{font-size:19px;margin-bottom:6px}
-  .price{font-size:15px;font-weight:700;color:var(--accent);margin-bottom:12px}
-  .card p{color:var(--muted);font-size:15.5px}
-  .card ul{list-style:none;margin-top:14px;color:var(--muted);font-size:14.5px}
-  .card li{padding:3px 0}
-  .card li::before{content:"•";color:var(--accent);margin-right:8px}
-  .note{margin-top:22px;color:var(--muted);font-size:14px;text-align:center}
+/* hero */
+.hero{padding:64px 0 40px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(46px,6.6vw,92px);margin:20px 0 26px;position:relative;z-index:1}
+.hero h1 .soft{color:var(--muted);font-weight:700}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px}
+.facts{display:flex;flex-wrap:wrap;gap:0;margin-top:40px;border-top:1px solid var(--line)}
+.facts div{padding:16px 26px 0 0;margin-right:26px;border-right:1px solid var(--line)}
+.facts div:last-child{border:0}
+.facts b{display:block;font-family:var(--display);font-size:26px;letter-spacing:-.03em}
+.facts span{font-size:14px;color:var(--muted)}
 
-  /* case study */
-  .case{display:grid;grid-template-columns:1fr 1.3fr;gap:48px;align-items:start;margin-top:12px}
-  .case-tag{display:inline-block;background:var(--accent-soft);color:var(--accent-dark);font-weight:600;font-size:14px;padding:6px 12px;border-radius:999px;margin-bottom:16px}
-  .case h3{font-size:24px;margin-bottom:12px}
-  .case p{color:var(--muted)}
-  .case + .case{margin-top:56px;padding-top:56px;border-top:1px solid var(--line)}
-  .work{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-  .work div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:20px}
-  .work h4{font-size:16px;margin-bottom:6px;display:flex;align-items:center;gap:8px}
-  .work p{font-size:14.5px;color:var(--muted)}
+/* before/after compare */
+.compare-wrap{position:relative}
+.stamp{position:absolute;z-index:5;top:-22px;right:-14px;width:118px;height:118px;border-radius:50%;background:var(--sun);display:grid;place-items:center;text-align:center;font-family:var(--display);font-weight:800;font-size:15px;line-height:1.05;transform:rotate(10deg);box-shadow:0 10px 24px rgba(16,32,27,.18);border:2px solid var(--ink)}
+.stamp em{font-style:normal;display:block;font-size:30px}
+.compare{position:relative;border:2px solid var(--ink);border-radius:16px;background:var(--card);overflow:hidden;box-shadow:12px 12px 0 var(--ink);--pos:50%;aspect-ratio:1/1.02;user-select:none}
+.chrome{height:40px;display:flex;align-items:center;gap:7px;padding:0 14px;border-bottom:2px solid var(--ink);background:var(--paper-2);position:relative;z-index:3}
+.chrome i{width:11px;height:11px;border-radius:50%;border:1.5px solid var(--ink)}
+.chrome .url{margin-left:10px;flex:1;height:24px;border-radius:6px;background:var(--card);border:1.5px solid var(--ink);font-family:var(--mono);font-size:11.5px;display:flex;align-items:center;padding:0 10px;gap:6px;overflow:hidden;white-space:nowrap}
+.pane{position:absolute;inset:40px 0 0 0;padding:22px}
+.pane.after{clip-path:inset(0 0 0 var(--pos))}
+.pane.before{background:repeating-linear-gradient(-45deg,#f1ebdf 0 10px,#ece4d5 10px 20px)}
+.pane.after{background:var(--card)}
+.label{position:absolute;bottom:14px;font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.12em;padding:5px 9px;border-radius:5px;border:1.5px solid var(--ink);z-index:4}
+.label.l{left:14px;background:#ffd9cf}.label.r{right:14px;background:#cfeedd}
+/* mock site bits */
+.m-nav{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.m-logo{width:86px;height:14px;border-radius:4px;background:var(--ink)}
+.m-links{display:flex;gap:8px}.m-links span{width:34px;height:8px;border-radius:3px;background:#b9b1a1}
+.m-hero{border-radius:10px;padding:20px;margin-bottom:14px}
+.m-h{height:16px;border-radius:4px;background:var(--ink);margin-bottom:9px}
+.m-p{height:8px;border-radius:3px;background:#b9b1a1;margin-bottom:7px}
+.m-btn{display:inline-block;margin-top:10px;font-size:11px;font-weight:700;padding:7px 12px;border-radius:999px}
+.m-row{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:14px}
+.m-row div{height:62px;border-radius:8px}
+.m-form{border-radius:10px;padding:14px;font-size:12px}
+.m-field{height:22px;border-radius:5px;margin-bottom:7px}
+.before .m-hero{background:#ddd3c1;transform:rotate(-1.2deg) translateX(14px);width:94%}
+.before .m-h{width:80%;background:#7d776c}
+.before .m-row{grid-template-columns:1.6fr .6fr}
+.before .m-row div{background:#cfc5b2}
+.before .m-row div:nth-child(2){transform:translateY(18px)}
+.before .m-row div:nth-child(3){display:none}
+.before .broken-img{display:grid;place-items:center;font-family:var(--mono);font-size:10px;color:#857c6d;border:1.5px dashed #a59b89;background:transparent!important}
+.before .m-btn{background:#c9bfae;color:#857c6d;text-decoration:line-through}
+.before .m-form{background:#e6dccb;border:1.5px solid var(--bad)}
+.before .m-field{background:#f4efe6}
+.err{display:flex;gap:7px;align-items:center;color:var(--bad);font-family:var(--mono);font-size:10.5px;font-weight:700}
+.warn{position:absolute;top:56px;right:16px;background:var(--bad);color:#fff;font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 9px;border-radius:5px;transform:rotate(4deg);letter-spacing:.04em}
+.spin{position:absolute;left:46%;top:44%;width:34px;height:34px;border:4px solid #c9bfae;border-top-color:var(--ink);border-radius:50%;animation:sp 1.1s linear infinite;opacity:.6}
+@keyframes sp{to{transform:rotate(360deg)}}
+.after .m-hero{background:var(--ink)}
+.after .m-h{background:var(--paper);width:72%}
+.after .m-p{background:#5f7a70}
+.after .m-btn{background:var(--signal);color:#1a0d07}
+.after .m-row div{background:var(--paper-2);border:1.5px solid var(--line)}
+.after .m-row div:nth-child(2){background:#ffd9cf}
+.after .m-form{background:var(--paper);border:1.5px solid var(--line)}
+.after .m-field{background:#fff;border:1.5px solid var(--line)}
+.okmsg{display:flex;gap:7px;align-items:center;color:var(--ok);font-family:var(--mono);font-size:10.5px;font-weight:700}
+.handle{position:absolute;top:40px;bottom:0;left:var(--pos);width:3px;background:var(--ink);z-index:4;transform:translateX(-1.5px);pointer-events:none}
+.handle::after{content:"";position:absolute;top:50%;left:50%;width:44px;height:44px;border-radius:50%;background:var(--signal);border:2.5px solid var(--ink);transform:translate(-50%,-50%);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2310201b' stroke-width='2.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l-6 6 6 6M15 6l6 6-6 6'/%3E%3C/svg%3E");background-size:22px;background-repeat:no-repeat;background-position:center}
+.compare input{position:absolute;inset:40px 0 0 0;width:100%;height:calc(100% - 40px);opacity:0;cursor:ew-resize;z-index:6;margin:0}
+.hint{margin-top:26px;font-size:14px;color:var(--muted);display:flex;gap:8px;align-items:center}
 
-  /* steps */
-  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-  .step{padding:28px;border-radius:var(--radius);border:1px solid var(--line);background:#fff}
-  .num{width:40px;height:40px;border-radius:50%;background:var(--accent);color:#fff;font-weight:700;display:grid;place-items:center;margin-bottom:16px}
-  .step h3{font-size:19px;margin-bottom:8px}
-  .step p{color:var(--muted);font-size:15.5px}
+/* ticker */
+.ticker{background:var(--ink);color:var(--paper);overflow:hidden;border-block:2px solid var(--ink);margin-top:56px}
+.ticker-track{display:flex;width:max-content;animation:tick 38s linear infinite}
+.ticker span{font-family:var(--display);font-weight:700;font-size:26px;letter-spacing:-.02em;padding:18px 0;white-space:nowrap;display:flex;align-items:center}
+.ticker span::after{content:"";width:12px;height:12px;background:var(--signal);margin:0 30px;transform:rotate(45deg)}
+@keyframes tick{to{transform:translateX(-50%)}}
 
-  /* contact */
-  .contact{background:var(--ink);color:#fff;border-radius:22px;padding:64px 48px;text-align:center}
-  .contact h2{color:#fff}
-  .contact .lead{color:#cbd5e1;margin:0 auto 30px}
-  .contact .email{display:block;margin-top:18px;color:#93c5fd;font-weight:600;font-size:18px}
-  .contact .loc{margin-top:22px;color:#94a3b8;font-size:15px}
-  .contact .pay{margin:20px auto 0;max-width:560px;color:#cbd5e1;font-size:15px}
-  .contact .pay-label{display:inline-block;margin-right:8px;padding:2px 10px;border:1px solid rgba(147,197,253,.4);border-radius:999px;color:#93c5fd;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+section{padding:120px 0}
 
-  footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:14.5px}
-  .foot{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+/* symptoms */
+.split{display:grid;grid-template-columns:.85fr 1.15fr;gap:72px;align-items:start}
+.sticky{position:sticky;top:110px}
+.symptoms{border-top:2px solid var(--ink)}
+.sym{display:grid;grid-template-columns:64px 1fr auto;gap:20px;align-items:baseline;padding:26px 0;border-bottom:1px solid var(--line);transition:background .2s,padding .25s}
+.sym:hover{background:var(--card);padding-left:14px;padding-right:14px}
+.sym .n{font-family:var(--mono);font-size:13px;color:var(--signal-d);font-weight:700}
+.sym h3{font-size:25px;margin-bottom:6px}
+.sym p{color:var(--muted);font-size:16px}
+.sym .tier{font-family:var(--mono);font-size:12px;font-weight:700;white-space:nowrap;border:1.5px solid var(--ink);border-radius:999px;padding:4px 10px}
 
-  @media (max-width:980px){
-    .grid{grid-template-columns:repeat(2,1fr)}
-    .hero-grid,.case{grid-template-columns:1fr;gap:40px}
-  }
-  @media (max-width:680px){
-    section{padding:64px 0}
-    .hero{padding:64px 0}
-    .nav-links a:not(.btn){display:none}
-    .grid,.steps,.work{grid-template-columns:1fr}
-    .contact{padding:48px 24px}
-    .hero-ctas .btn{width:100%;text-align:center}
-  }
+/* pricing */
+.pricing{background:var(--paper-2);border-block:1px solid var(--line)}
+.p-head{display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:end;margin-bottom:64px}
+.p-head .lede{padding-bottom:8px}
+.plans{display:grid;grid-template-columns:1fr 1fr 1.18fr 1fr;gap:18px;align-items:stretch}
+.plan{background:var(--card);border:2px solid var(--ink);border-radius:var(--r);padding:30px 26px;display:flex;flex-direction:column;position:relative;transition:transform .25s,box-shadow .25s}
+.plan:hover{transform:translateY(-6px);box-shadow:0 8px 0 var(--ink)}
+.plan .kind{font-family:var(--mono);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+.plan h3{font-size:26px;margin-bottom:10px}
+.price{font-family:var(--display);font-weight:800;letter-spacing:-.04em;font-size:56px;line-height:1;margin:6px 0 4px;display:flex;align-items:baseline;gap:6px}
+.price small{font-family:var(--body);font-size:15px;font-weight:600;letter-spacing:0;color:var(--muted)}
+.price .from{font-size:15px;font-family:var(--body);font-weight:600;letter-spacing:0;color:var(--muted);align-self:flex-start;margin-top:8px}
+.plan .desc{color:var(--muted);font-size:15.5px;margin:12px 0 18px}
+.plan ul{list-style:none;font-size:15px;margin-bottom:26px;flex:1}
+.plan li{padding:8px 0 8px 26px;border-top:1px dashed var(--line);position:relative}
+.plan li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:2.5px solid var(--ok);border-bottom:2.5px solid var(--ok);transform:rotate(-45deg)}
+.plan .btn{justify-content:center}
+.plan.feature{background:var(--ink);color:var(--paper);transform:translateY(-18px);box-shadow:0 0 0 0 var(--signal)}
+.plan.feature:hover{transform:translateY(-24px);box-shadow:0 8px 0 var(--signal)}
+.plan.feature .kind,.plan.feature .desc,.plan.feature .price small{color:#a9bdb4}
+.plan.feature li{border-color:#2f4a40}
+.plan.feature li::before{border-color:var(--signal)}
+.ribbon{position:absolute;top:-14px;left:26px;background:var(--signal);color:#1a0d07;font-family:var(--mono);font-size:11.5px;font-weight:700;letter-spacing:.08em;padding:5px 11px;border-radius:999px;border:2px solid var(--ink)}
+.plan.ai .price{font-size:46px}
+.also{margin-top:46px;display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.also b{font-family:var(--mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;margin-right:6px}
+.chip{border:1.5px solid var(--ink);border-radius:999px;padding:7px 15px;font-size:14.5px;font-weight:600;background:var(--card)}
+.chip em{font-style:normal;color:var(--muted);font-weight:500}
 
-  /* ===== modern polish layer ===== */
-  :root{--accent:#2563eb;--accent-2:#06b6d4;--grad:linear-gradient(135deg,#2563eb 0%,#3b82f6 45%,#06b6d4 100%);--radius:18px}
-  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif}
-  h1,h2,.logo{font-weight:800;letter-spacing:-.03em}
-  .card h3,.step h3,.case h3{font-weight:700}
-  .logo-mark{background:var(--grad);box-shadow:0 6px 16px rgba(37,99,235,.35)}
-  .logo-accent{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .btn{background:var(--grad);background-size:160% 160%;background-position:0% 50%;transition:background-position .35s,transform .15s,box-shadow .2s}
-  .btn:hover{background:var(--grad);background-size:160% 160%;background-position:100% 50%;transform:translateY(-2px);box-shadow:0 12px 28px rgba(37,99,235,.35)}
-  .btn-ghost{background:#fff;color:var(--ink);border:1px solid var(--line)}
-  .btn-ghost:hover{background:#fff;border-color:#bfdbfe;box-shadow:0 8px 20px rgba(15,23,42,.08)}
-  .eyebrow{background:var(--accent-soft);padding:6px 14px;border-radius:999px;font-size:12px}
-  .hero{position:relative;overflow:hidden;background:
-    radial-gradient(700px 420px at 90% 0%,rgba(6,182,212,.18) 0%,transparent 60%),
-    radial-gradient(900px 520px at 10% 110%,rgba(37,99,235,.14) 0%,transparent 60%),
-    linear-gradient(180deg,#f5f9ff 0%,#fff 100%)}
-  .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(37,99,235,.10) 1px,transparent 1px);background-size:22px 22px;-webkit-mask-image:linear-gradient(180deg,#000 0%,transparent 75%);mask-image:linear-gradient(180deg,#000 0%,transparent 75%);pointer-events:none}
-  .hero .wrap{position:relative}
-  .hero h1 span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-  .hero-card{position:relative;border-radius:22px;border:1px solid rgba(37,99,235,.15);box-shadow:0 30px 70px rgba(37,99,235,.14),0 4px 12px rgba(15,23,42,.05)}
-  .hero-card::before{content:"";position:absolute;left:28px;right:28px;top:0;height:4px;border-radius:0 0 6px 6px;background:var(--grad)}
-  .dot{background:linear-gradient(135deg,#dcfce7,#bbf7d0)}
-  .alt{background:linear-gradient(180deg,#f8fafc 0%,#f1f5fb 100%)}
-  /* services: 8 cards -> balanced 4+4 (desktop), 2x4 (tablet), 1 col (mobile) */
-  .grid{display:flex;flex-wrap:wrap;justify-content:center;gap:22px}
-  .grid .card{flex:0 1 calc((100% - 66px)/4)}
-  .card{position:relative;border-radius:var(--radius);box-shadow:0 1px 2px rgba(15,23,42,.04),0 8px 24px rgba(15,23,42,.05);transition:transform .2s,box-shadow .2s,border-color .2s}
-  .card:hover{transform:translateY(-4px);border-color:#bfdbfe;box-shadow:0 18px 40px rgba(37,99,235,.14)}
-  .card.featured{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,var(--grad) border-box}
-  .card.featured::after{content:"Most popular";position:absolute;top:-12px;right:20px;background:var(--grad);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(37,99,235,.3)}
-  .icon{width:50px;height:50px;border-radius:14px;background:linear-gradient(135deg,#eff6ff,#e0f2fe);border:1px solid #dbeafe;font-size:24px}
-  .price{display:inline-block;align-self:flex-start;background:var(--accent-soft);padding:3px 10px;border-radius:8px;font-size:14px}
-  .work div,.step{border-radius:16px;transition:transform .2s,box-shadow .2s}
-  .work div:hover,.step:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(15,23,42,.08)}
-  .case-tag{background:var(--grad);color:#fff}
-  .num{background:var(--grad);box-shadow:0 8px 18px rgba(37,99,235,.3)}
-  .contact{position:relative;overflow:hidden;border-radius:26px;background:radial-gradient(600px 300px at 15% 0%,rgba(37,99,235,.55),transparent 60%),radial-gradient(600px 300px at 90% 100%,rgba(6,182,212,.4),transparent 60%),#0b1224}
-  .contact .btn{background:#fff;color:var(--accent-dark)}
-  .contact .btn:hover{background:#fff;color:var(--accent-dark)}
-  @media (max-width:1100px){.grid .card{flex-basis:calc((100% - 22px)/2)}}
-  @media (max-width:680px){.grid .card{flex-basis:100%}.card.featured::after{right:16px}}
-  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
-  /* referral */
-  #refer{padding:80px 0 0}
-  #refer + #contact{padding-top:40px}
-  @media (max-width:680px){#refer{padding-top:56px}}
-  .refer{position:relative;display:flex;align-items:center;justify-content:space-between;gap:28px;flex-wrap:wrap;padding:36px 40px;border-radius:22px;border:2px solid transparent;background:linear-gradient(135deg,#f5f9ff,#ecfeff) padding-box,var(--grad) border-box;box-shadow:0 18px 44px rgba(37,99,235,.12)}
-  .refer-badge{flex:none;width:64px;height:64px;border-radius:18px;background:var(--grad);color:#fff;display:grid;place-items:center;font-size:30px;box-shadow:0 10px 24px rgba(37,99,235,.3)}
-  .refer-body{flex:1 1 360px}
-  .refer h2{font-size:clamp(24px,3vw,30px);margin-bottom:8px}
-  .refer p{color:var(--muted);font-size:16.5px;max-width:600px}
-  .refer-pct{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:800;white-space:nowrap}
-  @media (max-width:680px){.refer{padding:28px 22px;text-align:center;justify-content:center}.refer .btn{width:100%;text-align:center}}
-  /* ===== AI assistant ===== */
-  .grid .card{flex-basis:calc((100% - 44px)/3)}
-  .card.ai{border:2px solid transparent;background:linear-gradient(#fff,#fff) padding-box,linear-gradient(135deg,#2563eb,#7c3aed 55%,#06b6d4) border-box;box-shadow:0 14px 34px rgba(37,99,235,.14)}
-  .card.ai .new-badge{position:absolute;top:-12px;right:20px;background:#2563eb;color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:999px;box-shadow:0 6px 14px rgba(37,99,235,.35)}
-  .card.ai .icon{background:linear-gradient(135deg,#eff6ff,#ede9fe);border-color:#c7d2fe}
-  .card.ai .price{background:#2563eb;color:#fff}
-  .ai-demo{position:relative;overflow:hidden;display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:52px 48px;border-radius:26px;border:1px solid rgba(37,99,235,.18);background:radial-gradient(520px 300px at 100% 0%,rgba(6,182,212,.16),transparent 60%),radial-gradient(520px 320px at 0% 100%,rgba(124,58,237,.12),transparent 60%),linear-gradient(180deg,#f5f9ff,#fff);box-shadow:0 24px 60px rgba(37,99,235,.12)}
-  .ai-demo h2{margin-bottom:12px}
-  .ai-demo .lead{margin-bottom:22px}
-  .ai-perks{list-style:none;display:grid;gap:10px;margin-bottom:28px;color:var(--ink);font-size:15.5px}
-  .ai-perks li{display:flex;gap:10px;align-items:flex-start}
-  .ai-perks li::before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:#2563eb;color:#fff;display:grid;place-items:center;font-size:12px;font-weight:800;margin-top:1px}
-  .ai-ctas{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
-  .ai-ctas .fallback{font-size:14.5px;font-weight:600}
-  .live-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:#22c55e;margin-right:8px;box-shadow:0 0 0 0 rgba(34,197,94,.6);animation:pulse 1.8s infinite}
-  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(34,197,94,.55)}70%{box-shadow:0 0 0 9px rgba(34,197,94,0)}100%{box-shadow:0 0 0 0 rgba(34,197,94,0)}}
-  .chat-mock{background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:0 24px 50px rgba(15,23,42,.10);overflow:hidden}
-  .chat-head{display:flex;align-items:center;gap:10px;padding:14px 18px;background:var(--grad);color:#fff;font-weight:700;font-size:15px}
-  .chat-head small{display:block;font-weight:500;opacity:.85;font-size:12px}
-  .chat-av{width:34px;height:34px;border-radius:50%;background:rgba(255,255,255,.22);display:grid;place-items:center;font-size:18px}
-  .chat-body{padding:18px;display:flex;flex-direction:column;gap:10px;font-size:14.5px}
-  .bubble{max-width:85%;padding:10px 14px;border-radius:16px;line-height:1.45}
-  .bubble.bot{background:#f1f5f9;color:var(--ink);border-bottom-left-radius:5px;align-self:flex-start}
-  .bubble.me{background:#2563eb;color:#fff;border-bottom-right-radius:5px;align-self:flex-end}
-  .chips{display:flex;gap:8px;flex-wrap:wrap;padding:0 18px 18px}
-  .chip{border:1px solid #bfdbfe;background:var(--accent-soft);color:var(--accent-dark);font:inherit;font-size:13px;font-weight:600;padding:6px 12px;border-radius:999px;cursor:pointer;transition:background .15s,transform .15s}
-  .chip:hover{background:#dbeafe;transform:translateY(-1px)}
-  button.btn{border:0;font:inherit;font-weight:600;cursor:pointer}
-  @media (max-width:1100px){.grid .card{flex-basis:calc((100% - 22px)/2)}}
-  @media (max-width:980px){.ai-demo{grid-template-columns:1fr;gap:36px;padding:40px 32px}}
-  @media (max-width:680px){.grid .card{flex-basis:100%}.card.ai .new-badge{right:16px}.ai-demo{padding:32px 20px;border-radius:22px}.ai-ctas .btn{width:100%;text-align:center}.ai-ctas{justify-content:center}}
-  /* ===== free website check links ===== */
-  .nav-links a.nav-check{color:var(--accent-dark);font-weight:700}
-  .nav-links a.nav-check::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:#22c55e;margin-right:7px;vertical-align:middle;box-shadow:0 0 0 3px rgba(34,197,94,.18)}
-  .check-pill{display:inline-flex;align-items:center;gap:10px;max-width:100%;margin-bottom:18px;padding:6px 14px 6px 6px;border-radius:999px;background:#fff;border:1px solid #bfdbfe;box-shadow:0 8px 22px rgba(37,99,235,.12);color:var(--ink);font-size:14.5px;font-weight:600;transition:transform .15s,box-shadow .2s,border-color .2s}
-  .check-pill:hover{transform:translateY(-1px);border-color:#93c5fd;box-shadow:0 12px 28px rgba(37,99,235,.18)}
-  .check-pill .cp-new{flex:none;background:var(--grad);color:#fff;font-size:11.5px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border-radius:999px}
-  .check-pill .cp-txt{min-width:0}
-  .check-pill .cp-arrow{flex:none;color:var(--accent)}
-  .hero .eyebrow{display:table}
-  @media (max-width:1060px){.nav-links{gap:20px}}
-  @media (max-width:900px){.nav-links a[href="#how"],.nav-links a[href="#results"]{display:none}}
-  @media (max-width:680px){.check-pill{font-size:13.5px;text-align:left}}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:2px solid var(--ink)}
+.step{padding:30px 26px 0 0;position:relative}
+.step + .step{padding-left:26px;border-left:1px solid var(--line)}
+.step .big{font-family:var(--display);font-weight:800;font-size:84px;line-height:.9;letter-spacing:-.05em;color:transparent;-webkit-text-stroke:2px var(--ink);margin-bottom:22px}
+.step:hover .big{color:var(--signal)}
+.step h3{font-size:22px;margin-bottom:8px}
+.step p{color:var(--muted);font-size:15.5px}
+
+/* work */
+.work{background:var(--ink);color:var(--paper)}
+.work .tag{color:var(--signal)}
+.work p.lede{color:#a9bdb4}
+.cases{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:56px}
+.case{border:1.5px solid #2f4a40;border-radius:var(--r);padding:34px;background:var(--ink-2)}
+.case .mono{color:var(--sun)}
+.case h3{font-size:28px;margin:14px 0 12px}
+.case p{color:#a9bdb4;font-size:16px}
+.case ol{list-style:none;margin-top:22px;counter-reset:c}
+.case li{counter-increment:c;padding:12px 0;border-top:1px solid #2f4a40;display:flex;gap:14px;font-size:15.5px}
+.case li::before{content:"0" counter(c);font-family:var(--mono);font-size:12px;color:var(--signal);padding-top:3px}
+
+/* ai */
+.ai-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:72px;align-items:center}
+.chat{border:2px solid var(--ink);border-radius:20px;background:var(--card);box-shadow:12px 12px 0 var(--signal);overflow:hidden;max-width:470px;margin-left:auto}
+.chat-top{display:flex;align-items:center;gap:12px;padding:16px 20px;border-bottom:2px solid var(--ink);background:var(--paper-2)}
+.chat-top .av{width:36px;height:36px;border-radius:10px;background:var(--ink);display:grid;place-items:center}
+.chat-top b{display:block;font-size:15px}.chat-top small{color:var(--ok);font-size:12.5px;font-weight:600}
+.chat-body{padding:22px 20px;display:flex;flex-direction:column;gap:12px;min-height:250px}
+.bub{max-width:84%;padding:11px 15px;border-radius:16px;font-size:15px;line-height:1.45;opacity:0;transform:translateY(8px);transition:opacity .4s,transform .4s}
+.in .bub{opacity:1;transform:none}
+.in .bub:nth-child(2){transition-delay:.5s}.in .bub:nth-child(3){transition-delay:1.1s}
+.bub.bot{background:var(--paper-2);border-bottom-left-radius:4px}
+.bub.me{background:var(--ink);color:var(--paper);align-self:flex-end;border-bottom-right-radius:4px}
+.chat-foot{display:flex;gap:8px;flex-wrap:wrap;padding:0 20px 20px}
+.chat-foot button{font:600 13.5px var(--body);border:1.5px solid var(--ink);background:transparent;border-radius:999px;padding:7px 13px;cursor:pointer}
+.chat-foot button:hover{background:var(--sun)}
+.perks{list-style:none;margin:28px 0 34px}
+.perks li{padding:12px 0;border-bottom:1px solid var(--line);display:flex;gap:14px;align-items:baseline}
+.perks li b{font-family:var(--mono);font-size:12px;color:var(--signal-d)}
+.text-link{font-weight:600;text-decoration:underline;text-underline-offset:4px;margin-left:18px;font-size:15px}
+
+/* local */
+.local{padding:0 0 120px}
+.local-card{display:grid;grid-template-columns:1fr 1fr;border:2px solid var(--ink);border-radius:20px;overflow:hidden;background:var(--card)}
+.local-card .txt{padding:52px}
+.local-card h2{font-size:clamp(32px,3.8vw,50px);margin:16px 0 18px}
+.local-card p{color:var(--muted)}
+.cities{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
+.cities span{font-family:var(--mono);font-size:12px;font-weight:700;padding:6px 10px;border-radius:6px;background:var(--paper-2)}
+.map{background:var(--sun);position:relative;min-height:340px;border-left:2px solid var(--ink)}
+.map svg{position:absolute;inset:0;width:100%;height:100%}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px}
+details{border-bottom:1px solid var(--line)}
+details:first-of-type{border-top:2px solid var(--ink)}
+summary{list-style:none;cursor:pointer;padding:24px 0;font-family:var(--display);font-weight:700;font-size:22px;letter-spacing:-.02em;display:flex;justify-content:space-between;gap:20px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-family:var(--mono);font-size:24px;width:36px;height:36px;flex:none;border:1.5px solid var(--ink);border-radius:50%;display:grid;place-items:center;transition:transform .25s,background .2s}
+details[open] summary::after{transform:rotate(45deg);background:var(--signal)}
+details p{color:var(--muted);padding:0 60px 26px 0;font-size:16.5px}
+
+/* cta */
+.cta{padding:0 0 28px}
+.cta-box{background:var(--signal);border:2px solid var(--ink);border-radius:24px;padding:84px 64px;position:relative;overflow:hidden}
+.cta-box h2{font-size:clamp(44px,7vw,104px);max-width:900px;color:#1a0d07}
+.cta-box p{font-size:19px;max-width:520px;margin:22px 0 34px;color:#3a1a0d}
+.cta-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.cta-box .btn-line{border-color:#1a0d07;color:#1a0d07}
+.cta-box .mail{font-family:var(--mono);font-weight:700;font-size:15px;margin-top:30px;display:inline-block;color:#1a0d07}
+.cta-deco{position:absolute;right:-60px;bottom:-60px;width:380px;opacity:.95;pointer-events:none}
+.refer{margin-top:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;border:2px dashed var(--ink);border-radius:16px;padding:22px 28px}
+.refer p{font-size:16px}.refer b{font-family:var(--display);font-size:20px;letter-spacing:-.02em}
+
+footer{padding:40px 0 56px;font-size:14.5px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:28px}
+.foot a{text-decoration:none;font-weight:600;color:var(--ink)}
+
+/* reveal */
+.js .rv{opacity:0;transform:translateY(26px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;transform:none}.hl::after{transform:skew(-8deg)}}
+
+/* responsive */
+@media (max-width:1080px){
+  .plans{grid-template-columns:1fr 1fr}
+  .plan.feature{transform:none}.plan.feature:hover{transform:translateY(-6px)}
+  .steps{grid-template-columns:1fr 1fr}
+  .step:nth-child(3){border-left:0;padding-left:0}
+}
+@media (max-width:900px){
+  .hero-grid,.split,.ai-grid,.faq-grid,.local-card,.cases{grid-template-columns:1fr}
+  .hero-grid{gap:64px}
+  .sticky{position:static}
+  .split,.ai-grid,.faq-grid{gap:40px}
+  .chat{margin:0 auto 0 0}
+  .map{border-left:0;border-top:2px solid var(--ink);min-height:260px}
+  .nav-links a:not(.btn){display:none}
+}
+@media (max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 20px}
+  section{padding:84px 0}
+  .hero{padding:36px 0 20px}
+  .hero h1{font-size:clamp(44px,13vw,60px)}
+  p.lede{font-size:17.5px}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  
+  
+  .compare{box-shadow:7px 7px 0 var(--ink)}
+  .stamp{width:92px;height:92px;font-size:12px;right:-6px;top:-30px}.stamp em{font-size:23px}
+  .ticker span{font-size:20px}
+  .sym{grid-template-columns:40px 1fr;gap:12px}
+  .sym .tier{grid-column:2;justify-self:start}
+  .sym h3{font-size:21px}
+  .plans,.steps{grid-template-columns:1fr}
+  .step,.step + .step{padding:26px 0 24px;border-left:0;border-bottom:1px solid var(--line)}
+  .step .big{font-size:64px;margin-bottom:14px}
+  .local-card .txt{padding:32px 24px}
+  .case{padding:26px 22px}
+  summary{font-size:19px}
+  details p{padding-right:0}
+  .cta-box{padding:52px 24px 180px}
+  .cta-deco{width:240px;right:-40px;bottom:-50px}
+  .cta-row .btn{width:100%;justify-content:center}
+  .logo .sb{display:none}
+  .p-head{grid-template-columns:1fr;gap:20px}
+  .facts{display:grid;grid-template-columns:repeat(3,auto);justify-content:start}
+  .facts div{padding-right:14px;margin-right:14px}
+  .facts b{font-size:21px}
+  .facts span{font-size:13px}
+}
 </style>
 </head>
 <body>
+<script>document.documentElement.classList.add('js');document.body.classList.add('js')</script>
 
-<header>
+<header id="hdr">
   <div class="wrap nav">
-    <a href="#top" class="logo"><span class="logo-mark">⚡</span><span>Clear Site <span class="logo-accent">Solutions</span></span></a>
+    <a href="#top" class="logo" aria-label="Clear Site Solutions home">
+      <svg viewBox="0 0 40 40" aria-hidden="true"><rect x="1.5" y="1.5" width="37" height="37" rx="9" fill="#10201b"/><path d="M9 13.5h22" stroke="#f3efe6" stroke-width="2.4" stroke-linecap="round" opacity=".35"/><path d="M11.5 22.5l5.5 5.5 12-13" fill="none" stroke="#ff5b2e" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <span><b>Clear Site</b><small>SOLUTIONS<span class="sb"> · SAN BERNARDINO</span></small></span>
+    </a>
     <nav class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#results">Results</a>
-      <a href="#ai">AI assistant</a>
+      <a href="#fixes">What we fix</a>
+      <a href="#pricing">Pricing</a>
       <a href="#how">How it works</a>
-      <a href="check" class="nav-check">Free Website Check</a>
-      <a href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request" class="btn btn-sm">Get a fix</a>
+      <a href="#ai">AI assistant</a>
+      <a href="check">Free site check</a>
+      <a class="btn btn-sm" href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request&amp;body=My%20website%20is%3A%20%0AWhat%27s%20wrong%3A%20%0A">Get a quote</a>
     </nav>
   </div>
 </header>
 
 <main id="top">
-  <section class="hero">
-    <div class="wrap hero-grid">
-      <div>
-        <a class="check-pill" href="check"><span class="cp-new">Free</span><span class="cp-txt">30-second website check — see what's slowing you down</span><span class="cp-arrow">→</span></a>
-        <span class="eyebrow">Website fixes &amp; care for small businesses</span>
-        <h1>Your website, <span>fixed fast</span> — and kept running right.</h1>
-        <p class="lead">Broken pages, emails that never arrive, a slow site, or a security scare? I fix the problem quickly at a small-business price, then keep your site healthy — and can add a 24/7 AI chat assistant that answers your customers while you work.</p>
-        <div class="hero-ctas">
-          <a class="btn" href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request&amp;body=Hi%2C%0A%0AMy%20website%20is%3A%20%0AThe%20problem%20is%3A%20%0A">Email me about your site</a>
-          <a class="btn btn-ghost" href="check">🔎 Free website check</a>
-        </div>
-        <div class="trust">
-          <div>Quick fixes from $25</div>
-          <div>Clear pricing up front</div>
-          <div>Local &amp; remote</div>
-          <div>AI chat assistants</div>
-        </div>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag rv">Website repair &amp; care · Inland Empire</span>
+      <h1 class="rv">We fix your website. <span class="soft">Then we keep it</span> <span class="hl">fixed.</span></h1>
+      <p class="lede rv">Contact form gone quiet? Hacked? Slow, broken on phones, throwing a "Not secure" warning? Send us the link. You get a flat price before we touch anything, and most small fixes are done the same or next day.</p>
+      <div class="hero-ctas rv">
+        <a class="btn btn-signal" href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request&amp;body=My%20website%20is%3A%20%0AWhat%27s%20wrong%3A%20%0A">Send us your link <span class="arr">→</span></a>
+        <a class="btn btn-line" href="check">Run a free site check</a>
       </div>
-      <div class="hero-card">
-        <h3>Common fixes I handle</h3>
-        <div class="check"><span class="dot">✓</span>Contact forms &amp; order emails not sending</div>
-        <div class="check"><span class="dot">✓</span>Broken layouts, links, and plugins</div>
-        <div class="check"><span class="dot">✓</span>Hacked or infected site cleanup</div>
-        <div class="check"><span class="dot">✓</span>Slow page loads &amp; oversized images</div>
-        <div class="check"><span class="dot">✓</span>WordPress &amp; WooCommerce updates</div>
+      <div class="facts rv">
+        <div><b>$25</b><span>quick fixes</span></div>
+        <div><b>$150/mo</b><span>site care</span></div>
+        <div><b>Flat</b><span>price up front</span></div>
       </div>
     </div>
-  </section>
 
-  <section id="services" class="alt">
-    <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">Services</span>
-        <h2>Simple services, honest pricing</h2>
-        <p class="lead">Start with a single fix. Stay on a care plan only if it's useful to you.</p>
+    <div class="compare-wrap rv">
+      <div class="stamp"><div><em>$25</em>fixes<br>start here</div></div>
+      <div class="compare" id="cmp">
+        <div class="chrome"><i></i><i></i><i></i><div class="url"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="#10201b" stroke-width="2.5"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 018 0v3"/></svg>yourbusiness.com</div></div>
+        <div class="pane before" aria-hidden="true">
+          <div class="m-nav"><div class="m-logo" style="background:#7d776c"></div><div class="m-links"><span></span><span></span><span></span></div></div>
+          <div class="m-hero"><div class="m-h"></div><div class="m-p" style="width:90%"></div><div class="m-p" style="width:60%"></div><span class="m-btn">Book now</span></div>
+          <div class="m-row"><div class="broken-img">img_final_v2.jpg ✕</div><div></div><div></div></div>
+          <div class="m-form" style="margin-top:28px"><div class="m-field"></div><div class="m-field"></div><div class="err">✕ Error: message could not be sent</div></div>
+          <div class="warn">⚠ NOT SECURE</div>
+          <div class="spin"></div>
+        </div>
+        <div class="pane after" aria-hidden="true">
+          <div class="m-nav"><div class="m-logo"></div><div class="m-links"><span></span><span></span><span style="background:var(--signal)"></span></div></div>
+          <div class="m-hero"><div class="m-h"></div><div class="m-p" style="width:86%"></div><div class="m-p" style="width:58%"></div><span class="m-btn">Book now →</span></div>
+          <div class="m-row"><div></div><div></div><div></div></div>
+          <div class="m-form"><div class="m-field"></div><div class="m-field"></div><div class="okmsg">✓ Thanks! Your message was sent.</div></div>
+        </div>
+        <div class="handle"></div>
+        <span class="label l">BEFORE</span><span class="label r">AFTER</span>
+        <input type="range" min="0" max="100" value="50" aria-label="Drag to compare the broken and fixed website">
       </div>
-      <div class="grid">
-        <div class="card">
-          <div class="icon">🔧</div>
-          <h3>Quick Fix</h3>
-          <div class="price">$25</div>
-          <p>One specific, small problem fixed — a broken button, form, link, or layout glitch.</p>
-          <ul><li>Fast turnaround</li><li>Quote confirmed before work</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">🛡️</div>
-          <h3>Cleanup &amp; Repair</h3>
-          <div class="price">Quoted per job</div>
-          <p>Broken or hacked site? I clean it up, remove the damage, and harden it against repeat issues.</p>
-          <ul><li>Malware &amp; spam cleanup</li><li>Security hardening</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">🚀</div>
-          <h3>Speed Optimization</h3>
-          <div class="price">Quoted per job</div>
-          <p>Faster pages keep visitors around. Caching, image compression, and lazy-loading done right.</p>
-          <ul><li>Cache setup &amp; fixes</li><li>Image optimization</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">🖥️</div>
-          <h3>New Website Build</h3>
-          <div class="price">Quoted per project</div>
-          <p>A fast, clean, mobile-friendly website built from scratch — for new businesses or a full redesign.</p>
-          <ul><li>Mobile-friendly design</li><li>Built for speed</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">📈</div>
-          <h3>SEO &amp; Google Ranking</h3>
-          <div class="price">Quoted per project</div>
-          <p>Get found on Google — on-page SEO, Google Business Profile setup, and analytics so customers can actually find you.</p>
-          <ul><li>Google Business setup</li><li>Search-friendly pages</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">🎨</div>
-          <h3>Logo &amp; Branding</h3>
-          <div class="price">From $40</div>
-          <p>A clean, professional logo and brand look for your business — print and web ready.</p>
-          <ul><li>Custom logo</li><li>Brand colors &amp; fonts</li></ul>
-        </div>
-        <div class="card">
-          <div class="icon">🛒</div>
-          <h3>Online Store Setup</h3>
-          <div class="price">Quoted per project</div>
-          <p>Sell online with a full WooCommerce store — products, cart, checkout, and payments set up right.</p>
-          <ul><li>Products &amp; checkout</li><li>Secure payments</li></ul>
-        </div>
-        <div class="card featured">
-          <div class="icon">📅</div>
-          <h3>Monthly Care Plan</h3>
-          <div class="price">From $150/month</div>
-          <p>Ongoing upkeep so small problems don't turn into big ones — and someone to call when they do.</p>
-          <ul><li>Updates &amp; monitoring</li><li>Small fixes included</li><li>Priority support</li></ul>
-        </div>
-        <div class="card ai">
-          <span class="new-badge">New</span>
-          <div class="icon">🤖</div>
-          <h3>AI Chat Assistant</h3>
-          <div class="price">$300 setup + $99/month</div>
-          <p>A smart chat assistant on your website that answers customers instantly — even after hours. <a href="#ai">Try a live demo ↓</a></p>
-          <ul><li>Answers customer questions 24/7</li><li>Trained on your hours, prices &amp; services</li><li>Captures leads &amp; sends them to your email</li><li>Added to your existing website</li></ul>
-        </div>
-      </div>
-      <p class="note">Not sure which one you need? Email me what's going on and I'll tell you honestly.</p>
+      <p class="hint"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l-6 6 6 6M15 6l6 6-6 6"/></svg>Drag to compare. An illustration of the kind of problems we fix.</p>
     </div>
-  </section>
+  </div>
 
-  <section id="results">
-    <div class="wrap">
-      <span class="eyebrow">Results</span>
-      <h2>Recent work</h2>
-      <div class="case">
-        <div>
-          <span class="case-tag">E-commerce · Ongoing care</span>
-          <h3>A peptide &amp; supplement e-commerce store</h3>
-          <p>The owner came in with a few urgent problems: customers weren't reliably getting order emails, the site had been through a security issue, and pages were loading slowly. I worked through each one, and the store is now on a monthly care plan.</p>
-        </div>
-        <div class="work">
-          <div><h4>📧 Order emails fixed</h4><p>Repaired order-email delivery so customers receive their confirmations.</p></div>
-          <div><h4>🧹 Security cleanup</h4><p>Cleaned up after a security issue on the site.</p></div>
-          <div><h4>🔒 Site hardened</h4><p>Tightened security settings to reduce the chance of it happening again.</p></div>
-          <div><h4>⚡ Faster page loads</h4><p>Added lazy-loading, compressed images, and fixed caching.</p></div>
-        </div>
-      </div>
-      <div class="case">
-        <div>
-          <span class="case-tag">Healthcare · New website build</span>
-          <h3>A health &amp; rehab care facility</h3>
-          <p>Full website designed and built from scratch — clean, mobile-friendly, and easy for staff and families to use.</p>
-        </div>
-        <div class="work">
-          <div><h4>🛠️ Built from scratch</h4><p>Designed and built a complete new website for the facility.</p></div>
-          <div><h4>📱 Mobile-friendly</h4><p>Looks and works great on phones, tablets, and desktops.</p></div>
-          <div><h4>👪 Easy for families</h4><p>Clear layout so families can quickly find the information they need.</p></div>
-          <div><h4>🧭 Simple for staff</h4><p>Straightforward structure that's easy to keep up to date.</p></div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <div class="ticker" aria-hidden="true"><div class="ticker-track">
+    <span>Contact forms</span><span>Order emails</span><span>Hacked sites</span><span>Slow pages</span><span>"Not secure" warnings</span><span>Broken plugins</span><span>WooCommerce checkout</span><span>Mobile layouts</span>
+    <span>Contact forms</span><span>Order emails</span><span>Hacked sites</span><span>Slow pages</span><span>"Not secure" warnings</span><span>Broken plugins</span><span>WooCommerce checkout</span><span>Mobile layouts</span>
+  </div></div>
+</section>
 
-  <section id="ai">
-    <div class="wrap">
-      <div class="ai-demo">
-        <div>
-          <span class="eyebrow"><span class="live-dot"></span>Live demo</span>
-          <h2>Try our AI assistant</h2>
-          <p class="lead">See that chat bubble in the corner? It's a real AI assistant — the same kind I can add to your website. Ask it about services, pricing, or how it works.</p>
-          <ul class="ai-perks">
-            <li>Answers customer questions instantly, day or night</li>
-            <li>Trained on your business — hours, prices &amp; services</li>
-            <li>Turns visitors into leads and sends them to your inbox</li>
-          </ul>
-          <div class="ai-ctas">
-            <button type="button" class="btn" onclick="openAssistant()">💬 Chat with the assistant</button>
-            <a class="fallback" href="https://docsbot.ai/chat/JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3" target="_blank" rel="noopener">Open it in a new tab →</a>
-          </div>
-        </div>
-        <div class="chat-mock" aria-hidden="true">
-          <div class="chat-head"><span class="chat-av">🤖</span><div>Clear Site Assistant<small>Typically replies instantly</small></div></div>
-          <div class="chat-body">
-            <div class="bubble bot">Hi! 👋 I can answer questions about website fixes, pricing, and care plans.</div>
-            <div class="bubble me">How much is a quick fix?</div>
-            <div class="bubble bot">Quick fixes start at $25, and you get a clear quote before any work starts. Want me to pass your details along?</div>
-          </div>
-          <div class="chips">
-            <button type="button" class="chip" onclick="openAssistant()">What do you fix?</button>
-            <button type="button" class="chip" onclick="openAssistant()">Care plan pricing</button>
-            <button type="button" class="chip" onclick="openAssistant()">Add AI to my site</button>
-          </div>
-        </div>
-      </div>
+<section id="fixes">
+  <div class="wrap split">
+    <div class="sticky rv">
+      <span class="tag">Sound familiar?</span>
+      <h2 style="margin:18px 0 22px">Your site should bring in work, not make more of it.</h2>
+      <p class="lede">Most small-business sites don't break all at once. A plugin update here, an expired certificate there, and one day the leads just stop. These are the problems we see most, and what they usually cost to fix.</p>
     </div>
-  </section>
+    <div class="symptoms">
+      <div class="sym rv"><span class="n">01</span><div><h3>"Nobody's filled out the form in weeks."</h3><p>Contact forms and order emails that quietly fail. We find where the messages are getting lost and make them land in your inbox.</p></div><span class="tier">from $25</span></div>
+      <div class="sym rv"><span class="n">02</span><div><h3>Something's broken and you can't find the setting.</h3><p>Broken links, buttons, menus, images, typos and layouts that fell apart after an update.</p></div><span class="tier">from $25</span></div>
+      <div class="sym rv"><span class="n">03</span><div><h3>Your site got hacked, or Google says it's unsafe.</h3><p>Malware and spam cleanup, then the locks changed so it doesn't happen again the next week.</p></div><span class="tier">from $40</span></div>
+      <div class="sym rv"><span class="n">04</span><div><h3>It takes forever to load, especially on phones.</h3><p>Image compression, caching and mobile fixes so customers stop hitting the back button.</p></div><span class="tier">from $40</span></div>
+      <div class="sym rv"><span class="n">05</span><div><h3>Chrome shows "Not secure" next to your name.</h3><p>SSL certificate set up or repaired, plus mixed-content cleanup so the padlock stays put.</p></div><span class="tier">from $40</span></div>
+      <div class="sym rv"><span class="n">06</span><div><h3>You just want someone to handle it.</h3><p>Updates, backups, security monitoring and small edits every month. One email and it's done.</p></div><span class="tier">$150/mo</span></div>
+    </div>
+  </div>
+</section>
 
-  <section id="how" class="alt">
-    <div class="wrap">
-      <div class="center">
-        <span class="eyebrow">How it works</span>
-        <h2>Three simple steps</h2>
+<section id="pricing" class="pricing">
+  <div class="wrap">
+    <div class="p-head rv">
+      <div><span class="tag">Pricing</span><h2 style="margin-top:18px">Flat prices.<br>No surprise retainers.</h2></div>
+      <p class="lede">Start with one fix. Stay for Site Care only if it's worth it to you. You always see the price before any work starts.</p>
+    </div>
+    <div class="plans">
+      <div class="plan rv">
+        <span class="kind">One-time</span>
+        <h3>Quick Fix</h3>
+        <div class="price">$25</div>
+        <p class="desc">One small, specific problem, fixed and checked.</p>
+        <ul><li>Broken links &amp; buttons</li><li>Typos &amp; text changes</li><li>Contact forms</li><li>Images &amp; small layout issues</li></ul>
+        <a class="btn btn-line" href="mailto:the1ucantc@gmail.com?subject=Quick%20fix%20request">Request a fix</a>
       </div>
-      <div class="steps">
-        <div class="step"><div class="num">1</div><h3>Tell me the problem</h3><p>Email your website address and what's wrong. Screenshots help, but aren't required.</p></div>
-        <div class="step"><div class="num">2</div><h3>Get a clear quote</h3><p>I take a look and tell you exactly what it'll take and what it costs — before any work starts.</p></div>
-        <div class="step"><div class="num">3</div><h3>It gets fixed</h3><p>I make the fix, check that everything looks and works right, and walk you through what changed.</p></div>
+      <div class="plan rv">
+        <span class="kind">One-time</span>
+        <h3>Bigger Fix</h3>
+        <div class="price"><span class="from">from</span>$40</div>
+        <p class="desc">The jobs that need more than five minutes.</p>
+        <ul><li>Hacked site &amp; malware cleanup</li><li>Speed &amp; mobile fixes</li><li>Plugin &amp; theme repairs</li><li>SSL &amp; "Not secure" issues</li></ul>
+        <a class="btn btn-line" href="mailto:the1ucantc@gmail.com?subject=Website%20repair%20request">Get a quote</a>
+      </div>
+      <div class="plan feature rv">
+        <span class="ribbon">MOST PEACE OF MIND</span>
+        <span class="kind">Monthly</span>
+        <h3>Site Care</h3>
+        <div class="price"><span class="from">from</span>$150<small>/month</small></div>
+        <p class="desc">We look after the site so small problems never turn into big ones.</p>
+        <ul><li>Software &amp; plugin updates</li><li>Regular backups</li><li>Security monitoring</li><li>Small edits every month</li><li>Priority help when something breaks</li></ul>
+        <a class="btn btn-signal" href="mailto:the1ucantc@gmail.com?subject=Site%20Care%20plan">Start Site Care <span class="arr">→</span></a>
+      </div>
+      <div class="plan ai rv">
+        <span class="kind">Add-on</span>
+        <h3>AI Chat Assistant</h3>
+        <div class="price">$300<small>setup</small></div>
+        <p class="desc" style="margin-top:4px"><b style="color:var(--ink);font-size:17px">+ $99/month.</b> A chat assistant trained on your business that answers customers 24/7.</p>
+        <ul><li>Your hours, prices &amp; services</li><li>Collects leads for you</li><li>Added to your existing site</li></ul>
+        <a class="btn btn-line" href="#ai">Try the live demo</a>
       </div>
     </div>
-  </section>
+    <div class="also rv">
+      <b>Also available</b>
+      <span class="chip">New website builds <em>· quoted</em></span>
+      <span class="chip">SEO &amp; Google Business setup <em>· quoted</em></span>
+      <span class="chip">Online store setup <em>· quoted</em></span>
+      <span class="chip">Logo &amp; branding <em>· from $40</em></span>
+    </div>
+  </div>
+</section>
 
-  <section id="refer">
-    <div class="wrap">
-      <div class="refer">
-        <div class="refer-badge">🤝</div>
-        <div class="refer-body">
-          <h2>Refer a friend, you both save</h2>
-          <p>Know a business that needs a website fixed or built? Refer them — when they book, you both get <span class="refer-pct">15% off</span> your next job.</p>
-        </div>
-        <a class="btn" href="mailto:the1ucantc@gmail.com?subject=Referral&amp;body=Hi%2C%0A%0AI%27d%20like%20to%20refer%3A%20%0A">Refer someone</a>
-      </div>
+<section id="how">
+  <div class="wrap">
+    <div class="rv" style="max-width:760px"><span class="tag">How it works</span><h2 style="margin-top:18px">Four steps. No phone tag.</h2></div>
+    <div class="steps">
+      <div class="step rv"><div class="big">01</div><h3>Send the link</h3><p>Email your website address and what's wrong. A screenshot helps, but it's not required.</p></div>
+      <div class="step rv"><div class="big">02</div><h3>Get a flat price</h3><p>We look it over and tell you exactly what it needs and what it costs, before any work starts.</p></div>
+      <div class="step rv"><div class="big">03</div><h3>We fix &amp; check it</h3><p>The fix goes in, we test it on desktop and phone, and walk you through what changed.</p></div>
+      <div class="step rv"><div class="big">04</div><h3>Stay covered</h3><p>Optional. Site Care keeps it updated, backed up and watched so it stays fixed.</p></div>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="contact">
-    <div class="wrap">
-      <div class="contact">
-        <h2>Let's get your site fixed</h2>
-        <p class="lead">Send me your website and a quick note about what's going on. I'll get back to you with next steps.</p>
-        <a class="btn" href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request">Email me</a>
-        <a class="email" href="mailto:the1ucantc@gmail.com">the1ucantc@gmail.com</a>
-        <p class="pay"><span class="pay-label">Payments</span> Pay easily by card (via PayPal invoice), PayPal, or Zelle — details sent when you book.</p>
-        <p class="loc">📍 Based in San Bernardino, CA · Serving the Inland Empire &amp; clients remotely</p>
+<section class="work" id="work">
+  <div class="wrap">
+    <div class="rv"><span class="tag">Recent work</span><h2 style="margin:18px 0 18px;max-width:780px">Real problems, fixed for real businesses.</h2><p class="lede">Client names kept private. Here's what the work looked like.</p></div>
+    <div class="cases">
+      <div class="case rv">
+        <span class="mono">Online store · Repair + Site Care</span>
+        <h3>An e-commerce store with urgent problems</h3>
+        <p>Customers weren't reliably getting order emails, the site had been through a security issue, and pages were loading slowly.</p>
+        <ol><li>Repaired order-email delivery so confirmations arrive</li><li>Cleaned up after the security issue and hardened settings</li><li>Sped up pages with image compression, lazy-loading and caching fixes</li><li>Now on a monthly care plan</li></ol>
+      </div>
+      <div class="case rv">
+        <span class="mono">Healthcare · New website build</span>
+        <h3>A health &amp; rehab care facility</h3>
+        <p>A full website designed and built from scratch, made for families looking for answers and staff who need to keep it current.</p>
+        <ol><li>Designed and built the complete site</li><li>Works on phones, tablets and desktops</li><li>Clear layout so families find what they need fast</li><li>Simple structure that's easy to keep up to date</li></ol>
       </div>
     </div>
-  </section>
+  </div>
+</section>
+
+<section id="ai">
+  <div class="wrap ai-grid">
+    <div class="rv">
+      <span class="tag">AI Chat Assistant · $300 setup + $99/month</span>
+      <h2 style="margin:18px 0 20px">Answers your customers while you're on a job.</h2>
+      <p class="lede">The chat bubble in the corner of this page is a real assistant, the same kind we add to your site. Ask it about pricing or what we fix.</p>
+      <ul class="perks">
+        <li><b>24/7</b>Answers common questions day or night</li>
+        <li><b>YOURS</b>Trained on your hours, prices and services</li>
+        <li><b>LEADS</b>Collects contact details so you can follow up</li>
+      </ul>
+      <button type="button" class="btn" onclick="openAssistant()">Chat with the assistant <span class="arr">→</span></button>
+      <a class="text-link" href="https://docsbot.ai/chat/JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3" target="_blank" rel="noopener">Open in a new tab</a>
+    </div>
+    <div class="chat rv" aria-hidden="true">
+      <div class="chat-top"><span class="av"><svg width="20" height="20" viewBox="0 0 40 40"><path d="M9 21l7 7 15-16" fill="none" stroke="#ff5b2e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg></span><div><b>Clear Site Assistant</b><small>● Online now</small></div></div>
+      <div class="chat-body">
+        <div class="bub bot">Hi! I can answer questions about website fixes, pricing and Site Care.</div>
+        <div class="bub me">How much is a quick fix?</div>
+        <div class="bub bot">Quick fixes are $25, and you get a clear price before any work starts. Want me to pass your details along?</div>
+      </div>
+      <div class="chat-foot"><button type="button" onclick="openAssistant()">What do you fix?</button><button type="button" onclick="openAssistant()">Site Care pricing</button><button type="button" onclick="openAssistant()">Add AI to my site</button></div>
+    </div>
+  </div>
+</section>
+
+<div class="local">
+  <div class="wrap">
+    <div class="local-card rv">
+      <div class="txt">
+        <span class="tag">Local, and remote too</span>
+        <h2>Based in San Bernardino. Working all over the IE.</h2>
+        <p>We work with small businesses across the Inland Empire, and with clients anywhere in the U.S. by email. Everything happens online, so you don't have to take time off to meet.</p>
+        <div class="cities"><span>San Bernardino</span><span>Riverside</span><span>Fontana</span><span>Rialto</span><span>Redlands</span><span>Highland</span><span>Colton</span><span>Ontario</span><span>Rancho Cucamonga</span><span>Upland</span><span>Yucaipa</span></div>
+      </div>
+      <div class="map" aria-hidden="true">
+        <svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice">
+          <g fill="none" stroke="#10201b" stroke-width="1.2" opacity=".22">
+            <path d="M0 70 C120 40 220 110 500 60"/><path d="M0 140 C140 120 260 170 500 130"/><path d="M0 220 C150 190 300 250 500 200"/><path d="M0 300 C160 280 330 330 500 290"/><path d="M90 0 C120 140 70 260 110 400"/><path d="M230 0 C260 150 210 270 250 400"/><path d="M380 0 C400 120 350 260 390 400"/>
+          </g>
+          <path d="M0 250 L140 238 L260 212 L360 190 L500 172" fill="none" stroke="#10201b" stroke-width="7" stroke-linecap="round"/>
+          <path d="M0 250 L140 238 L260 212 L360 190 L500 172" fill="none" stroke="#f3efe6" stroke-width="2" stroke-dasharray="10 10"/>
+          <g font-family="JetBrains Mono,monospace" font-size="12" font-weight="700" fill="#10201b">
+            <circle cx="120" cy="215" r="5"/><text x="70" y="203">ONTARIO</text>
+            <circle cx="205" cy="190" r="5"/><text x="165" y="178">FONTANA</text>
+            <circle cx="230" cy="290" r="5"/><text x="194" y="314">RIVERSIDE</text>
+            <circle cx="380" cy="230" r="5"/><text x="356" y="254">REDLANDS</text>
+          </g>
+          <g transform="translate(305 128)">
+            <circle r="46" fill="#ff5b2e" opacity=".25"><animate attributeName="r" values="20;52;20" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values=".45;0;.45" dur="3s" repeatCount="indefinite"/></circle>
+            <circle r="15" fill="#ff5b2e" stroke="#10201b" stroke-width="3"/>
+            <path d="M-6 0l4 4 8-9" fill="none" stroke="#10201b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+            <rect x="-78" y="-62" width="156" height="30" rx="15" fill="#10201b"/>
+            <text x="0" y="-42" text-anchor="middle" font-family="JetBrains Mono,monospace" font-size="12.5" font-weight="700" fill="#f3efe6">SAN BERNARDINO</text>
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="rv"><span class="tag">FAQ</span><h2 style="margin:18px 0 18px">Straight answers.</h2><p class="lede">Don't see your question? Email it. A real person reads every message.</p></div>
+    <div class="rv">
+      <details open><summary>How fast can you fix my site?</summary><p>Most quick fixes are done the same day or the next day. Bigger jobs like a hacked-site cleanup get a timeline with your quote.</p></details>
+      <details><summary>When and how do I pay?</summary><p>You see the price before any work starts. Once the work is done and you've approved it, pay by card through a PayPal invoice, PayPal, or Zelle.</p></details>
+      <details><summary>Do I have to sign up for a monthly plan?</summary><p>No. Plenty of people just need one fix. Site Care is there if you'd rather never think about updates, backups or security again.</p></details>
+      <details><summary>What's included in Site Care?</summary><p>Ongoing software and plugin updates, backups, security monitoring, small edits each month, and priority help when something goes wrong. Plans start at $150/month.</p></details>
+      <details><summary>What kind of websites do you work on?</summary><p>WordPress and WooCommerce are our home turf. Built on something else? Send the link and we'll tell you honestly whether we can help.</p></details>
+      <details><summary>How does the AI Chat Assistant work?</summary><p>We set it up with your hours, prices and services so it can answer customer questions 24/7 and collect leads. It's $300 to set up plus $99/month. Try the one on this page to see it in action.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta" id="contact">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <h2>Send the link. We'll take it from there.</h2>
+      <p>Tell us your website address and what's going wrong. You'll get a flat price and next steps fast.</p>
+      <div class="cta-row">
+        <a class="btn" href="mailto:the1ucantc@gmail.com?subject=Website%20fix%20request&amp;body=My%20website%20is%3A%20%0AWhat%27s%20wrong%3A%20%0A">Email us about your site <span class="arr">→</span></a>
+        <a class="btn btn-line" href="check">Free 30-second site check</a>
+      </div>
+      <a class="mail" href="mailto:the1ucantc@gmail.com">the1ucantc@gmail.com</a>
+      <svg class="cta-deco" viewBox="0 0 200 200" aria-hidden="true"><circle cx="100" cy="100" r="96" fill="#10201b"/><circle cx="100" cy="100" r="70" fill="none" stroke="#f3efe6" stroke-width="2" stroke-dasharray="4 8"/><path d="M62 102l26 26 52-56" fill="none" stroke="#f6c445" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div class="refer rv">
+      <p><b>Know a business with a broken site?</b><br>Refer them. When they book, you both get 15% off your next job.</p>
+      <a class="btn btn-sm btn-line" href="mailto:the1ucantc@gmail.com?subject=Referral&amp;body=I%27d%20like%20to%20refer%3A%20%0A">Refer someone</a>
+    </div>
+  </div>
+</section>
 </main>
 
 <footer>
   <div class="wrap foot">
-    <div>© <span id="yr">2026</span> Clear Site Solutions · Website Fixes, Builds &amp; Care</div>
-    <div>San Bernardino, CA · <a href="mailto:the1ucantc@gmail.com">the1ucantc@gmail.com</a></div>
+    <div>© <span id="yr">2026</span> Clear Site Solutions · Website repair &amp; care · San Bernardino, CA</div>
+    <div><a href="mailto:the1ucantc@gmail.com">the1ucantc@gmail.com</a> · <a href="check">Free site check</a></div>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
-<script>function openAssistant(){try{if(window.DocsBotAI&&typeof window.DocsBotAI.open==="function"){window.DocsBotAI.open();return}}catch(e){}window.open("https://docsbot.ai/chat/JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3","_blank","noopener")}</script>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+(function(){
+  var h=document.getElementById('hdr');addEventListener('scroll',function(){h.classList.toggle('scrolled',scrollY>8)},{passive:true});
+  var els=document.querySelectorAll('.rv,.chat');
+  if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12,rootMargin:'0px 0px -40px 0px'});els.forEach(function(el){io.observe(el)})}else{els.forEach(function(el){el.classList.add('in')})}
+  var c=document.getElementById('cmp'),r=c.querySelector('input'),touched=false;
+  function set(v){c.style.setProperty('--pos',v+'%')}
+  r.addEventListener('input',function(){touched=true;set(r.value)});
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches){
+    var t0=null;function step(t){if(touched)return;if(!t0)t0=t;var p=Math.min((t-t0)/2200,1),e=p<.5?2*p*p:1-Math.pow(-2*p+2,2)/2;set(Math.round(88-38*e));if(p<1)requestAnimationFrame(step)}
+    setTimeout(function(){requestAnimationFrame(step)},700);
+  }
+})();
+function openAssistant(){try{if(window.DocsBotAI&&typeof window.DocsBotAI.open==="function"){window.DocsBotAI.open();return}}catch(e){}window.open("https://docsbot.ai/chat/JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3","_blank","noopener")}
+</script>
 <script type="text/javascript">window.DocsBotAI=window.DocsBotAI||{},DocsBotAI.init=function(e){return new Promise((t,r)=>{var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://widget.docsbot.ai/chat.js";let o=document.getElementsByTagName("script")[0];o.parentNode.insertBefore(n,o),n.addEventListener("load",()=>{let n;Promise.all([new Promise((t,r)=>{window.DocsBotAI.mount(Object.assign({}, e)).then(t).catch(r)}),(n=function e(t){return new Promise(e=>{if(document.querySelector(t))return e(document.querySelector(t));let r=new MutationObserver(n=>{if(document.querySelector(t))return e(document.querySelector(t)),r.disconnect()});r.observe(document.body,{childList:!0,subtree:!0})})})("#docsbotai-root"),]).then(()=>t()).catch(r)}),n.addEventListener("error",e=>{r(e.message)})})};</script>
 <script type="text/javascript">DocsBotAI.init({id: "JP2Zn98rAhowZUJ99uWt/e43i0risZUyYhsXGkEo3"});</script>
 </body>
